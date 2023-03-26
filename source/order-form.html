@@ -15,13 +15,13 @@
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item">
           <a href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a href="#">Каталог продукции</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--active">
           <a>Подбор программы</a>
         </li>
       </ul>
@@ -73,14 +73,15 @@
       </label>
     </fieldset>
     <!-- Cat-contachs -->
-    <fieldset class="order-form__contacts form__fieldset" >
-      <legend class="form__legend">
+    <fieldset class="order-form__contacts form__fieldset">
+      <legend class="form__legend block-title">
         Контактные данные
         (владельца кота)
       </legend>
       <label class="form__label">
         <span class="form__text">E-mail:*</span>
-        <input type="email" class="form__field form__field--email" name="email" placeholder="kuklachev@gmail.com" required>
+        <input type="email" class="form__field form__field--email" name="email" placeholder="kuklachev@gmail.com"
+               required>
       </label>
       <label class="form__label">
         <span class="form__text">Телефон:*</span>
@@ -88,19 +89,15 @@
       </label>
     </fieldset>
     <!-- Comment -->
-    <fieldset class="order-form__comment form__fieldset">
-      <legend class="form__legend">
-        Комментарий
-      </legend>
-      <label class="visually-hidden" > Поле для ввода комментария
-        <textarea  class="form__field form__field--area" name="comment" rows="6">
+    <label class="order-form__comment">
+      <span class="block-title">Комментарий </span>
+      <textarea class="form__field form__field--area" name="comment" rows="6">
           Расскажите обо всех повадках кота
         </textarea>
-      </label>
-    </fieldset>
+    </label>
     <!-- Аdditions -->
     <fieldset class="order-form__additions form__fieldset">
-      <legend class="form__legend">
+      <legend class="form__legend block-title">
         Дополнительно
       </legend>
       <label class="form__label form__label--check">
