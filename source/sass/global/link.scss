@@ -1,0 +1,13 @@
+.link{
+  background-color: transparent;
+  border-style: none;
+  text-decoration: none;
+
+  &:link{
+    color: $color-link;
+  }
+
+  &:visited{
+    color: $color-link-visited;
+  }
+}

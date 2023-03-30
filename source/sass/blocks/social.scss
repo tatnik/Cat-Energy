@@ -1,0 +1,33 @@
+.social {
+  @mixin img-block($url, $width, $height) {
+    content: "";
+    width: $width;
+    height: $height;
+    background-image: url($url);
+    background-position: center;
+    color: $color-base-light;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    display: flex;
+
+    &--vk:before{
+      @include img-block("/img/icon_vk.svg", 23px, 16px)
+    }
+
+    &--ig:before{
+      @include img-block("/img/icon_ig.svg", 16px, 16px)
+    }
+
+    &--fb:before{
+      @include img-block("/img/icon_fb.svg", 16px, 22px)
+    }
+
+  }
+}

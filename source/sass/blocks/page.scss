@@ -1,0 +1,16 @@
+.page{
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight:400;
+  line-height:18px;
+
+  &__body{
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    min-height: 100%;
+    margin: 0;
+    color:$color-base;
+    background-color: $color-bg-base;
+  }
+}

@@ -1,0 +1,28 @@
+.main-nav {
+  display: flex;
+
+  &__header {
+    display: flex;
+    flex-direction:row;
+  }
+
+  &__logo::before{
+    content: "";
+    width: 35px;
+    height: 38px;
+    background: url("../img/logo.svg")  0 0 no-repeat;
+    display: inline-block;
+  }
+
+  &__item {
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

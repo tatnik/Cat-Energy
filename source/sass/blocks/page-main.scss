@@ -1,0 +1,24 @@
+.page-main {
+
+  &__header {
+    background-image: linear-gradient($color-bg-accent-opacity, $color-bg-accent-opacity),
+      url("../img/promo_bg.png");
+    background-repeat: no-repeat;
+    background-size: 320px 302px;
+    color: $color-accent;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &__button {
+    background-color: $color-bg-accent;
+  }
+}

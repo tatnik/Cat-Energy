@@ -1,0 +1,25 @@
+.button {
+  background-color: $color-bg-accent;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    background-color: $color-bg-accent-dark;
+  }
+
+  &:active {
+    background-color: $color-bg-accent-dark;
+
+    &__text {
+      opacity: 0.3;
+    }
+  }
+
+  &__text {
+    font-family: "Oswald", sans-serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color: $color-accent;
+    opacity: 1;
+  }
+}
