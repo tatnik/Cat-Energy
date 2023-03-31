@@ -3,26 +3,32 @@
 <head>
   <meta charset="utf-8">
   <title>Order form </title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body class="page__body">
+
 <!-- Header -->
 <header class="page-header">
-  <a class="page-header__logo" href="">
-    <img class="page-header__logo-image" src="img/logo.svg" alt="Логотип компании" width="102" height="19">
-  </a>
   <!-- Navigation -->
   <nav class="main-nav">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
+      <!-- Navigation header -->
+      <div class="main-nav__header">
+        <a class="main-nav__logo logo link" href="index.html">
+          <img class="img" src="img/logo-font.svg" alt="Логотип компании в виде надписи" width="102" height="19">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
+      <!-- Site navigation -->
+      <ul class="main-nav__list list">
         <li class="main-nav__item">
-          <a href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#">Каталог продукции</a>
+          <a class="link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item main-nav__item--active">
-          <a>Подбор программы</a>
+          <a class="link" href="order-form.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="link" href="">Подбор программы</a>
         </li>
       </ul>
     </div>
@@ -74,7 +80,7 @@
     </fieldset>
     <!-- Cat-contachs -->
     <fieldset class="order-form__contacts form__fieldset">
-      <legend class="form__legend block-title">
+      <legend class="form__legend title title__line">
         Контактные данные
         (владельца кота)
       </legend>
@@ -90,14 +96,14 @@
     </fieldset>
     <!-- Comment -->
     <label class="order-form__comment">
-      <span class="block-title">Комментарий </span>
+      <span class=" title title__line">Комментарий </span>
       <textarea class="form__field form__field--area" name="comment" rows="6">
           Расскажите обо всех повадках кота
-        </textarea>
+      </textarea>
     </label>
     <!-- Аdditions -->
     <fieldset class="order-form__additions form__fieldset">
-      <legend class="form__legend block-title">
+      <legend class="form__legend title title__line">
         Дополнительно
       </legend>
       <label class="form__label form__label--check">
@@ -128,50 +134,53 @@
 
 <!-- Footer -->
 <footer class="page-footer">
-  <div class="page-footer__wrapper">
 
-    <!-- Contacts -->
-    <div class="page-footer__contacts contacts">
-      <h2 class="visually-hidden">Контактные данные</h2>
-      <p class="contacts__title">Приглашаем
-        к сотрудничеству дилеров! </p>
-      <!-- Address  -->
-      <address class="contacts__address">
-        ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-      </address>
-      <!-- Map -->
-      <div class="contacts__map">
+  <!-- Contacts -->
+  <div class="page-footer__contacts contacts">
+    <h2 class="visually-hidden">Контактные данные</h2>
+    <p class="contacts__title title">Приглашаем
+      к сотрудничеству дилеров! </p>
+    <!-- Address  -->
+    <address class="contacts__address">
+      ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+    </address>
+    <!-- Map -->
+    <div class="contacts__map">
 
+    </div>
+  </div>
+
+  <div class="page_footer__footer">
+    <div class="page-footer__wrapper">
+      <!-- Logo -->
+      <img src="img/logo-font.svg" alt="Логотип компании" class="page-footer__logo" width="128" height="24">
+
+      <!-- Social -->
+      <div class="page-footer__social social">
+        <ul class="social__list list">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vk">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--ig">
+              <span class="visually-hidden">Нельзяграм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--fb">
+              <span class="visually-hidden">Нельзякнига</span>
+            </a>
+          </li>
+        </ul>
       </div>
+
+      <!-- Copyright -->
+      <a class="page-footer__copyright link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
-
-    <!-- Logo -->
-    <img src="img/logo.svg" alt="Логотип компании" class="page-footer__logo" width="128" height="24">
-
-    <!-- Social -->
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a href="#" class="social__link social__link--vk">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--ig">
-            <span class="visually-hidden">Нельзяграм</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link social__link--fb">
-            <span class="visually-hidden">Нельзякнига</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Copyright -->
-    <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
   </div>
 </footer>
+
 </body>
 </html>

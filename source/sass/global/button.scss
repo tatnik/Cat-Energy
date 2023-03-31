@@ -1,5 +1,6 @@
 .button {
   background-color: $color-bg-accent;
+  color: $color-accent;
   text-decoration: none;
   display: inline-block;
 
@@ -19,7 +20,11 @@
     font-family: "Oswald", sans-serif;
     font-weight:400;
     text-transform: uppercase;
-    color: $color-accent;
     opacity: 1;
+  }
+
+  &__theme--two {
+    background-color: $color-bg-add;
+    color: $color-base;
   }
 }

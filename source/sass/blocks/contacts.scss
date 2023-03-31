@@ -1,5 +1,9 @@
 .contacts {
   display: flex;
   flex-direction: row;
-  background-color: $color-bg-base;
+  background-color: $color-bg-add;
+
+  &__theme--two {
+    background-color: $color-bg-base;
+  }
 }
