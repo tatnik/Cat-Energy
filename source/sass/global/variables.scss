@@ -9,11 +9,18 @@ $color-base: #444;
 $color-base-light: #666;
 $color-base-dark: #222;
 $color-add: #000;
+$color-add-opacity: rgba(0, 0, 0, 0.4);
 $color-accent: #fff;
 $color-line: #ff8282;
-
-
 
 $color-link: $color-base;
 $color-link-visited: $color-base;
 $color-arrow: $color-add;
+
+// media
+
+$vp-table : 768px;
+$vp-desktop : 1440px;
+
+// arrow
+$arrow-right:'\2192';

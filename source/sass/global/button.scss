@@ -2,7 +2,12 @@
   background-color: $color-bg-accent;
   color: $color-accent;
   text-decoration: none;
+  text-align: center;
   display: inline-block;
+  border: none;
+  padding-top:10px;
+  padding-bottom:10px;
+  width:100%;
 
   &:hover {
     background-color: $color-bg-accent-dark;

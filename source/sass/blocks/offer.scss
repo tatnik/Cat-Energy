@@ -13,7 +13,7 @@
     &--slim:before {
       content: "";
       background: url("/img/cat-slim.svg") 0 0 no-repeat;
-      width: 50px;
+      width: 68px;
       height: 53px;
       background-size: contain;
     }
@@ -21,14 +21,38 @@
     &--pro:before {
       content: "";
       background: url("/img/cat-pro.svg") 0 0 no-repeat;
-      width: 67px;
-      height: 50px;
+      width: 68px;
+      height: 53px;
       background-size: contain;
     }
   }
 
   &__link {
     display: flex;
-    position:relative;
+
+    &:after {
+      content: $arrow-right;
+    }
+
+    &:active{
+      opacity: 0.3;
+    }
+  }
+
+  @media(min-width: $vp-table) {
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+
+      &--slim:before {
+        width: 268px;
+        height: 211px;
+      }
+
+      &--pro:before {
+        width: 268px;
+        height: 211px;
+      }
+    }
   }
 }

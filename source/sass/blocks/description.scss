@@ -1,34 +1,35 @@
 .description {
 
-  @mixin img-block($url) {
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-image: url($url);
-    background-position: center;
-    background-color: $color-bg-accent;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
-  }
 
   &__item {
     display: flex;
     flex-direction: row;
 
-    &--1:before {
-      @include img-block("/img/icon_leaf.svg")
+    $icons: "leaf", "tub", "eat", "alarm";
+
+    @mixin img-block($icon-name, $width, $height) {
+      &--icon-#{$icon-name}:before {
+        content: '';
+        height: $height;
+        width: $width;
+        background-image: url("../img/icon_#{$icon-name}.svg");
+        background-position: center;
+        background-color: $color-bg-accent;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+      }
     }
 
-    &--2:before {
-      @include img-block("/img/icon_tub.svg")
+    @media(max-width: $vp-table) {
+      @each $icon in $icons {
+        @include img-block($icon, 60px, 60px);
+      }
     }
 
-    &--3:before {
-      @include img-block("/img/icon_eat.svg")
-    }
-
-    &--4:before {
-      @include img-block("/img/icon_alarm.svg")
+    @media(min-width: $vp-table) {
+      @each $icon in $icons {
+        @include img-block($icon, 80px, 80px);
+      }
     }
   }
 }

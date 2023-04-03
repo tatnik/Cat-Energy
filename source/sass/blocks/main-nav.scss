@@ -1,21 +1,30 @@
 .main-nav {
-  display: flex;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__header {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
   }
 
-  &__logo::before{
-    content: "";
-    width: 35px;
-    height: 38px;
-    background: url("../img/logo.svg")  0 0 no-repeat;
-    display: inline-block;
+  &__list {
+    display: flex;
+    flex-direction: column;
   }
 
   &__item {
     text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
 
     &:hover {
       opacity: 0.8;
@@ -23,6 +32,42 @@
 
     &:active {
       opacity: 0.6;
+    }
+  }
+
+
+
+  @media (min-width: $vp-table) {
+    &__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    &__header {
+      width: min-content;
+    }
+
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 35px;
+    }
+
+    &__item {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+  @media (min-width: $vp-desktop) {
+    &__item {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 }
