@@ -1,14 +1,24 @@
 .page-header {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 20px;
-  line-height: 20px;
-  padding:10px 20px;
+  padding: 0 20px;
 
-  @media(min-width: $vp-table) {
-    padding:25px 30px;
+  &__wrapper {
+    @include left-right-border();
+    padding-top: 12px;
   }
 
-  @media(min-width: $vp-desktop) {
-    padding:55px 110px;
+  @media (min-width: $vp-tablet) {
+    padding: 0 30px;
+
+    &__wrapper {
+      padding-top: 25px;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 0 110px;
+
+    &__wrapper {
+      padding-top: 55px;
+    }
   }
 }

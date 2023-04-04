@@ -22,3 +22,30 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin left-right-border() {
+  border-left: 2px solid $color-line;
+  border-right: 2px solid $color-line;
+}
+
+@mixin color-link($color:$color-link, $color-visited:$color-link, $color-focus:$color-link,  $color-hover:$color-link, $color-active:$color-link) {
+  color: $color;
+
+  &:visited {
+    color: $color-visited;
+  }
+
+  &:focus {
+    color: $color-focus;
+  }
+
+  &:hover {
+    color: $color-hover;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+}
+

@@ -20,13 +20,13 @@
       }
     }
 
-    @media(max-width: $vp-table) {
+    @media(max-width: $vp-tablet) {
       @each $icon in $icons {
         @include img-block($icon, 60px, 60px);
       }
     }
 
-    @media(min-width: $vp-table) {
+    @media(min-width: $vp-tablet) {
       @each $icon in $icons {
         @include img-block($icon, 80px, 80px);
       }

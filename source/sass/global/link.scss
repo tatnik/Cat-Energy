@@ -3,13 +3,8 @@
   border-style: none;
   text-decoration: none;
 
-  &:link {
-    color: $color-link;
-  }
+  @include color-link();
 
-  &:visited {
-    color: $color-link-visited;
-  }
 
   &__icon {
     & path {
