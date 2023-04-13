@@ -18,7 +18,7 @@
     <a class="logo  logo__font link" href="">
       <img class="img" src="img/logo-font.svg" alt="Логотип компании в виде надписи" width="102" height="19">
     </a>
-    <button class="burger-button burger-button--opened" type="button">
+    <button class="burger-button burger-button--nav-opened burger-button--nojs" type="button">
       <span class="visually-hidden">Открыть меню</span>
       <span class="burger-button__line1"></span>
       <span class="burger-button__line2"></span>
@@ -27,7 +27,7 @@
   </div>
 
   <!-- Site navigation -->
-  <nav class="page-header__nav main-nav">
+  <nav class="page-header__nav main-nav  main-nav--closed">
     <ul class="main-nav__list list">
       <li class="main-nav__item main-nav__item--active">
         <a class="link">Главная</a>
@@ -253,6 +253,21 @@
   </div>
 </footer>
 
+<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.burger-button');
 
+  navToggle.classList.remove('burger-button--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navToggle.classList.add('burger-button--nav-opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navToggle.classList.remove('burger-button--nav-opened');
+    }
+  });
+</script>
 </body>
 </html>
