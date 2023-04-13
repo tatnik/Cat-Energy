@@ -27,7 +27,7 @@
   </div>
 
   <!-- Site navigation -->
-  <nav class="page-header__nav main-nav  main-nav--closed">
+  <nav class="page-header__nav main-nav">
     <ul class="main-nav__list list">
       <li class="main-nav__item main-nav__item--active">
         <a class="link">Главная</a>
@@ -43,14 +43,16 @@
 
   <div class="page-header__promo promo">
     <!-- Promo -->
-    <h1 class="promo__title title">Функциональное <br> питание для котов</h1>
-    <p class="promo__subtitle title title--upp">Занялся собой? Займись котом!</p>
-    <a href="order-form.html" class="promo__button button">
-      <span class="button__text">Подобрать программу</span>
-    </a>
-    <img class="img promo__img" src="img/promo.png" alt="Баночка с кошачьим кормом Cat Energy">
+    <div class="promo__main">
+      <h1 class="promo__title title">Функциональное <br> питание для котов</h1>
+      <p class="promo__subtitle title title--upp">Занялся собой? Займись котом!</p>
+      <a href="order-form.html" class="promo__button button">
+        <span class="button__text">Подобрать программу</span>
+      </a>
+      <img class="img promo__img" src="img/promo.png" alt="Баночка с кошачьим кормом Cat Energy">
+    </div>
+    <div class="promo__bg"></div>
   </div>
-</div>
 </header>
 
 <main class="page-main">
@@ -259,7 +261,7 @@
 
   navToggle.classList.remove('burger-button--nojs');
 
-  navToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {
       navMain.classList.remove('main-nav--closed');
       navToggle.classList.add('burger-button--nav-opened');

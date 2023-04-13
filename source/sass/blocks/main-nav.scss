@@ -60,10 +60,7 @@
 
   @media (min-width: $vp-desktop) {
     align-self: auto;
-    background-image: linear-gradient($color-bg-accent-opacity, $color-bg-accent-opacity),
-    url("../img/promo_bg.png");
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
+
 
 
     &__list {

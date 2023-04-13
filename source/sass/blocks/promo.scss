@@ -1,14 +1,16 @@
 .promo {
+
+  &__main {
   display: flex;
   flex-direction: column;
   background-origin: border-box;
   position: relative;
-  padding: 0 20px;
+  padding: 30px 20px 0 20px;
+  }
 
   &__title {
     font-size: 36px;
     line-height: 36px;
-    margin-top: 30px;
   }
 
   &__subtitle {
@@ -22,12 +24,18 @@
     height: 270px;
   }
 
+  &__bg {
+    display: none;
+  }
+
   @media(max-width: $vp-tablet - 1px) {
 
-    align-items: center;
-    color: $color-accent;
-    background: url("../img/promo_bg-mobile-green.png") no-repeat top;
-    background-size: auto 320px;
+    &__main {
+      align-items: center;
+      color: $color-accent;
+      background: url("../img/promo_bg-mobile-green.png") no-repeat top;
+      background-size: auto 320px;
+    }
 
     &__button {
       order: 4;
@@ -41,14 +49,15 @@
 
   @media (min-width: $vp-tablet) {
 
-    align-items: flex-start;
-    color: $color-add;
-    padding: 0 117px;
+    &__main {
+      align-items: flex-start;
+      color: $color-add;
+      padding: 64px 117px 0 117px;
+    }
 
     &__title {
       font-size: 60px;
       line-height: 60px;
-      margin-top: 64px;
     }
 
     &__subtitle {
@@ -74,10 +83,24 @@
   }
 
   @media (min-width: $vp-desktop) {
-    padding: 0 0 185px 190px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: -117px;
+    z-index: -1;
+    margin-bottom: -117px;
 
-    &__title {
-      margin-top: 82px;
+    &__main{
+      padding: 223px 0 185px 190px;
+    }
+
+    &__bg{
+      display:block;
+      background-image: linear-gradient($color-bg-accent-opacity, $color-bg-accent-opacity),
+      url("../img/promo_bg.png");
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto, cover;
+
     }
 
     &__button {
@@ -88,9 +111,8 @@
       width: 552px;
       height: 499px;
       position: absolute;
-      left: 85%;
+      left: 81%;
       z-index: 0;
-      margin-top:0;
     }
   }
 }
