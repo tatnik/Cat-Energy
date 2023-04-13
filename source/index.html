@@ -9,52 +9,52 @@
 <body class="page__body">
 <!-- Header -->
 <header class="page-header">
-  <div class="page-header__wrapper">
-    <!-- Navigation -->
-    <nav class="main-nav">
-      <!-- Navigation header -->
-      <div class="main-nav__header">
-        <a class="logo logo__img link" href="">
-          <span class="visually-hidden">Логотип компании в виде рисунка</span>
-        </a>
-        <a class="logo  logo__font link" href="">
-          <img class="img" src="img/logo-font.svg" alt="Логотип компании в виде надписи" width="102" height="19">
-        </a>
-        <button class="main-nav__toggle burger-button burger-button--opened" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <span class="burger-button__line1"></span>
-          <span class="burger-button__line2"></span>
-          <span class="burger-button__line3"></span>
-        </button>
-      </div>
-      <!-- Site navigation -->
-      <ul class="main-nav__list list">
-        <li class="main-nav__item main-nav__item--active">
-          <a class="link">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="catalog.html" class="link">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="order-form.html" class="link">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+
+
+  <!-- Navigation header -->
+  <div class="page-header__logo">
+    <a class="logo logo__img link" href="">
+      <span class="visually-hidden">Логотип компании в виде рисунка</span>
+    </a>
+    <a class="logo  logo__font link" href="">
+      <img class="img" src="img/logo-font.svg" alt="Логотип компании в виде надписи" width="102" height="19">
+    </a>
+    <button class="burger-button burger-button--opened" type="button">
+      <span class="visually-hidden">Открыть меню</span>
+      <span class="burger-button__line1"></span>
+      <span class="burger-button__line2"></span>
+      <span class="burger-button__line3"></span>
+    </button>
   </div>
+
+  <!-- Site navigation -->
+  <nav class="page-header__nav main-nav">
+    <ul class="main-nav__list list">
+      <li class="main-nav__item main-nav__item--active">
+        <a class="link">Главная</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="catalog.html" class="link">Каталог продукции</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="order-form.html" class="link">Подбор программы</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-header__promo promo">
+    <!-- Promo -->
+    <h1 class="promo__title title">Функциональное <br> питание для котов</h1>
+    <p class="promo__subtitle title title--upp">Занялся собой? Займись котом!</p>
+    <a href="order-form.html" class="promo__button button">
+      <span class="button__text">Подобрать программу</span>
+    </a>
+    <img class="img promo__img" src="img/promo.png" alt="Баночка с кошачьим кормом Cat Energy">
+  </div>
+
 </header>
 
 <main class="page-main">
-  <!-- Main header -->
-  <header class="page-main__header">
-    <div class="page-main__wrapper">
-      <h1 class="page-main__title title">Функциональное питание для котов</h1>
-      <p class="page-main__subtitle title">Занялся собой? Займись котом!</p>
-      <img class="img" src="img/promo.png" alt="Баночка с кошачьим кормом Cat Energy">
-      <a href="order-form.html" class="page-main__button button">
-        <span class="button__text">Подобрать программу</span>
-      </a>
-    </div>
-  </header>
 
   <!-- Offers -->
   <section class="page-main__offers">

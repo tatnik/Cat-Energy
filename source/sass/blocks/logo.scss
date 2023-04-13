@@ -1,5 +1,10 @@
 .logo {
   opacity: 1;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 
   &__img{
     width: 34px;
@@ -23,6 +28,10 @@
 
   @media(min-width: $vp-tablet) {
 
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: flex-start;
+
     &__img{
       width: 60px;
       height: 50px;
@@ -32,6 +41,8 @@
   }
 
   @media(min-width: $vp-tablet) {
+
+    padding: 55px 110px 0 110px;
 
     &__img{
       width: 70px;

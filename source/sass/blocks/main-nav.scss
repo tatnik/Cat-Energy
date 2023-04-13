@@ -2,17 +2,6 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
-  display: flex;
-  flex-direction: column;
-
-
-  &__header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
 
   &__list {
     display: flex;
@@ -39,7 +28,7 @@
     }
   }
 
-  @media (max-width: $vp-tablet) {
+  @media (max-width: $vp-tablet - 1px) {
 
     &__item {
       padding-top: 22px;
@@ -49,19 +38,13 @@
   }
 
   @media (min-width: $vp-tablet) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-
-    &__header {
-      width: min-content;
-    }
+    align-self: center;
 
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
       column-gap: 35px;
+      justify-content: flex-end;
     }
 
     &__item {
@@ -73,18 +56,24 @@
         border-bottom: 2px solid $color-bg-accent;
       }
     }
-
-    &__toggle {
-      display: none;
-    }
   }
 
   @media (min-width: $vp-desktop) {
+    align-self: auto;
+    background-image: linear-gradient($color-bg-accent-opacity, $color-bg-accent-opacity),
+    url("../img/promo_bg.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+
+
+    &__list {
+       }
 
     &__item {
       font-weight: 400;
       font-size: 20px;
       line-height: 30px;
+      color: $color-accent;
 
       & .link {
         @include color-link($color-accent, $color-accent, $color-accent, $color-accent, $color-accent)

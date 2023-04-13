@@ -1,0 +1,99 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  background-origin: border-box;
+  position: relative;
+  padding: 0 20px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 25px;
+  }
+
+  &__img {
+    width: 280px;
+    height: 270px;
+  }
+
+  @media(max-width: $vp-tablet - 1px) {
+
+    align-items: center;
+    color: $color-accent;
+    background: url("../img/promo_bg-mobile-green.png") no-repeat top;
+    background-size: auto 320px;
+
+    &__button {
+      order: 4;
+    }
+
+    &__img {
+      margin-top: 30px;
+      order: 3;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+
+    align-items: flex-start;
+    color: $color-add;
+    padding: 0 117px;
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 64px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 40px;
+    }
+
+    &__button {
+      padding-left: 26px;
+      padding-right: 26px;
+      width: auto;
+      margin-top: 50px;
+    }
+
+    &__img {
+      width: 709px;
+      height: 609px;
+      margin-top: -84px;
+      position: relative;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 0 0 185px 190px;
+
+    &__title {
+      margin-top: 82px;
+    }
+
+    &__button {
+      margin-top: 52px;
+    }
+
+    &__img {
+      width: 552px;
+      height: 499px;
+      position: absolute;
+      left: 85%;
+      z-index: 0;
+      margin-top:0;
+    }
+  }
+}
+
+
+

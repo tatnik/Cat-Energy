@@ -1,24 +1,66 @@
 .page-header {
-  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
 
-  &__wrapper {
-    @include left-right-border();
-    padding-top: 12px;
+  &__logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+   }
+
+  &__nav {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  &__promo {
+    grid-column: 1/-1;
+    grid-row: 3/4;
   }
 
   @media (min-width: $vp-tablet) {
-    padding: 0 30px;
+    padding-top: 25px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
 
-    &__wrapper {
-      padding-top: 25px;
+    &__logo {
+
+      & .burger-button{
+        display:none;
+      }
+    }
+
+    &__nav {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__promo {
+      grid-column: 1/3;
+      grid-row: 2/3;
     }
   }
 
   @media (min-width: $vp-desktop) {
-    padding: 0 110px;
+    padding-top: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
 
-    &__wrapper {
-      padding-top: 55px;
+    &__logo {
+
     }
+
+    &__nav {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      padding: 70px 110px 0 30px;
+    }
+
+    &__promo {
+      grid-column: 1/2;
+      grid-row: 2/2;
+     }
   }
 }
