@@ -52,18 +52,20 @@
     &__main {
       align-items: flex-start;
       color: $color-add;
-      padding: 64px 117px 0 117px;
+      padding: 64px 30px 0 30px;
     }
 
     &__title {
       font-size: 60px;
       line-height: 60px;
+      margin-left: 80px;
     }
 
     &__subtitle {
       font-size: 20px;
       line-height: 20px;
       margin-top: 40px;
+      margin-left: 80px;
     }
 
     &__button {
@@ -71,6 +73,7 @@
       padding-right: 26px;
       width: auto;
       margin-top: 50px;
+      margin-left: 80px;
     }
 
     &__img {
@@ -90,8 +93,8 @@
     z-index: -1;
     margin-bottom: -117px;
 
-    &__main{
-      padding: 223px 0 185px 190px;
+    &__main {
+      padding: 223px 0 185px 110px;
     }
 
     &__bg{

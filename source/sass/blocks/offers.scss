@@ -1,0 +1,19 @@
+.offers {
+
+  &__item{
+    margin-bottom: 20px;
+  }
+
+  @media(min-width: $vp-tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media(min-width: $vp-desktop) {
+
+    &__list{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
+  }
+}
