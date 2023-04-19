@@ -1,16 +1,21 @@
 .offers {
 
-  &__item{
-    margin-bottom: 20px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
   }
 
   @media(min-width: $vp-tablet) {
-    margin-bottom: 30px;
+
+    &__list {
+      row-gap: 30px
+    }
   }
 
   @media(min-width: $vp-desktop) {
 
-    &__list{
+    &__list {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;

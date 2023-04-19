@@ -9,6 +9,14 @@
     line-height: 37px;
     margin-left: 90px;
 
+    &--slim:before {
+      background: url("/img/cat-slim.svg") 50% 100% no-repeat;
+    }
+
+    &--pro:before {
+      background: url("/img/cat-pro.svg") 50% 100% no-repeat;
+    }
+
     &--slim:before,
     &--pro:before {
       content: "";
@@ -20,13 +28,6 @@
       top: 20px;
     }
 
-    &--slim:before {
-      background: url("/img/cat-slim.svg") 50% 100% no-repeat;
-    }
-
-    &--pro:before {
-      background: url("/img/cat-pro.svg") 50% 100% no-repeat;
-      }
   }
 
   &__text {
