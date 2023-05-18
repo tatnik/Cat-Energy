@@ -1,10 +1,13 @@
 .slider {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background-color: transparent;
+  align-items: center;
 
   &__image {
     width: 311px;
-    height: 240px;
+    height: 232px;
     display: none;
 
     &--current {
@@ -31,6 +34,7 @@
     flex-grow: 0;
     cursor: pointer;
 
+
     &:hover {
       border-bottom-style: solid;
     }
@@ -40,11 +44,89 @@
     }
   }
 
-  &__toggle{
+  &__toggle {
     width: 84px;
-    height: 14px;
+    height: 12px;
+    background: $color-bg-base;
+    border: 1px solid $color-border-special;
+    border-radius: 6px;
     flex-shrink: 1;
     flex-grow: 0;
     align-self: center;
+  }
+
+
+  &__toggle-button {
+    width: 35px;
+    height: 6px;
+    background: $color-bg-accent;
+    border-radius: 6px;
+  }
+
+  &__toggle-button--left {
+    transform: translate(3px, 3px);
+  }
+
+  &__toggle-button--right {
+    transform: translate(46px, 3px);
+  }
+
+
+  @media(min-width: $vp-tablet) {
+
+    &__image {
+      height: auto;
+      width: 708px;
+    }
+
+
+    &__button .title {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+
+    &__toggle {
+      width: 428px;
+      height: 6px;
+      background: $color-border-special;
+      border: none;
+    }
+
+    &__toggle-button {
+      background: $color-bg-base ;
+      width:32px;
+      height:32px;
+      border-radius:18px;
+      border: 1px solid $color-border-special;
+
+      &::after{
+        width: 8px;
+        height: 8px;
+        background: $color-bg-accent;
+        border-radius: 4px;
+        content: " ";
+        position: absolute;
+        left: 12px;
+        top: 12px;
+      }
+    }
+
+    &__toggle-button--left {
+      transform: translate(0, -15px);
+    }
+
+    &__toggle-button--right {
+      transform: translate(394px, -15px);
+    }
+
+  }
+  @media(min-width: $vp-desktop) {
+
+    &__image {
+      width: 100%;
+      height: auto;
+    }
+
   }
 }

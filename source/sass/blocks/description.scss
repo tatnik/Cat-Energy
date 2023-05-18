@@ -117,6 +117,7 @@
     &__list {
       padding-top: 71px;
       grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
       column-gap: 80px;
     }
   }

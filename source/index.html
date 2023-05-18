@@ -127,67 +127,70 @@
 
   <!-- Results -->
   <section class="results">
-    <div class="results__wrapper">
-      <h2 class="results__title title">
-        Живой пример
-      </h2>
-      <!-- Description -->
-      <p class="results__text text">
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок!
-        При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-      </p>
-      <!-- Stats -->
-      <dl class="results__stats-list stats-list">
-        <div class="results__stats-item">
-          <dt class="results__stats-term">
-            Снижение веса
-          </dt>
-          <dd class="results__stats-value">
-            5 кг
-          </dd>
-        </div>
-        <div class="results__stats-item">
-          <dt class="results__stats-term">
-            Затрачено времени
-          </dt>
-          <dd class="results__stats-value">
-            60 дней
-          </dd>
-        </div>
-        <div class="results__stats-item">
-          <dt class="results__stats-term">
-            Затраты на питание:
-          </dt>
-          <dd class="results__stats-value">
-            15 000 руб
-          </dd>
-        </div>
-      </dl>
+    <div class="wrapper">
+      <div class="results__tab">
+        <!-- Description -->
 
-      <!-- Toggle -->
-      <div class="results__slider slider">
-        <img src="img/cat-before.png" alt="Очень толстый кот"
-             class="slider__image slider__image--1 slider__image--current" width="311"
-             height="232">
-        <img src="img/cat-after.png" alt="Очень худой кот" class="slider__image slider__image--2" width="311"
-             height="232">
-        <div class="slider__buttons">
-          <button class="slider__button slider__button--1 slider__button--current" type="button"><span
-            class="title title--upp">Было</span></button>
-          <svg class="slider__toggle">
-            <svg width="84" height="14" viewBox="0 0 84 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.5" y="0.5" width="83" height="13" rx="5.5" fill="white" stroke="#CDCDCD"/>
-              <rect x="4" y="4" width="35" height="6" rx="3" fill="#68B738"/>
-            </svg>
-          </svg>
-          <button class="slider__button slider__button--2" type="button"><span class="title title--upp">Стало</span>
-          </button>
+        <div class="results__description">
+          <h2 class="results__title title">
+            Живой пример
+          </h2>
+
+          <p class="results__text text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок!
+            При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <!-- Stats -->
+          <dl class="results__stats-list stats-list">
+            <div class="stats-list__item">
+              <dt class="stats-list__term">
+                Снижение веса
+              </dt>
+              <dd class="stats-list__value">
+                5 кг
+              </dd>
+            </div>
+            <div class="stats-list__item">
+              <dt class="stats-list__term">
+                Затрачено времени
+              </dt>
+              <dd class="stats-list__value">
+                60 дней
+              </dd>
+            </div>
+            <div class="stats-list__item">
+              <dt class="stats-list__term">
+                Затраты на питание:
+              </dt>
+              <dd class="stats-list__value">
+                15 000 руб
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Toggle -->
+        <div class="results__slider slider">
+          <img src="img/cat-before.png" alt="Очень толстый кот"
+               class="slider__image slider__image--1 slider__image--current" width="311"
+               height="232">
+          <img src="img/cat-after.png" alt="Очень худой кот" class="slider__image slider__image--2" width="311"
+               height="232">
+          <div class="slider__buttons">
+            <button class="slider__button slider__button--1 slider__button--current" type="button"><span
+              class="title title--upp">Было</span></button>
+            <div class="slider__toggle">
+              <div class="slider__toggle-button slider__toggle-button--left"></div>
+            </div>
+
+            <button class="slider__button slider__button--2" type="button"><span class="title title--upp">Стало</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <!-- Footer -->
