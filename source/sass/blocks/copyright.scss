@@ -6,6 +6,11 @@
   align-items: center;
   width: 100%;
 
+  &__link:active {
+    opacity: 0.3;
+  }
+
+
   @media(min-width: $vp-tablet){
     column-gap: 22px;
   }
