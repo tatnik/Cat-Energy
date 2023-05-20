@@ -48,7 +48,7 @@
 
   @media(min-width: $vp-desktop) {
 
-    background-image: linear-gradient($color-bg-base 205px, $color-bg-add 205px);
+    background-image: linear-gradient($color-bg-base 195px, $color-bg-add 194px);
     padding-top: 0;
     padding-bottom: 75px;
 
@@ -67,7 +67,7 @@
     }
 
     &__title {
-      padding-bottom: 5px;
+      padding-bottom: 75px;
     }
 
     &__slider {

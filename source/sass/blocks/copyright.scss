@@ -1,0 +1,12 @@
+.copyright {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media(min-width: $vp-tablet){
+    column-gap: 22px;
+  }
+ }
