@@ -1,0 +1,35 @@
+.form {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color:$color-base;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__fieldset {
+    border: none;
+  }
+
+  &__label {
+    text-transform: uppercase;
+  }
+
+  &__field {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::placeholder {
+      text-transform: uppercase;
+      font-family: "Oswald", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}

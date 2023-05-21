@@ -1,0 +1,23 @@
+.add-catalog{
+
+  &__promo {
+    background: url("/img/add_promo.png") 0 0 no-repeat ;
+    display: flex;
+    height:289px;
+  }
+
+  &__promo-text {
+    display: block;
+    color: $color-accent;
+  }
+
+  &__promo-text:before {
+    content: "";
+    display: block;
+    width: 78px;
+    height: 80px;
+    background-image: url("/img/icon_gift.svg");
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+}

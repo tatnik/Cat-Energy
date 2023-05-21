@@ -1,0 +1,125 @@
+.description {
+
+  $icons: "leaf", "tub", "eat", "alarm";
+
+  @mixin img-block($icon-name, $width, $height) {
+    &__item--icon-#{$icon-name}:before {
+      content: '';
+      height: $height;
+      width: $width;
+      background-image: url("../img/icon_#{$icon-name}.svg");
+      background-position: center;
+      background-color: $color-bg-accent;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+  }
+
+  @mixin number-block($icon-name, $counter) {
+    &__item--icon-#{$icon-name}:after {
+       content: '#{$counter}';
+    }
+  }
+
+  padding-top: 27px;
+  padding-bottom: 22px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__list {
+    padding-top: 38px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+  }
+
+
+  @media(max-width: $vp-tablet - 1px) {
+    @each $icon in $icons {
+      @include img-block($icon, 60px, 60px);
+    }
+  }
+
+  @media(min-width: $vp-tablet) {
+
+    padding-top: 27px;
+    padding-bottom: 22px;
+
+    &__list {
+      padding-top: 38px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 80px;
+      row-gap: 36px;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 80px 136px;
+      grid-template-rows: 80px auto;
+      grid-gap: 30px;
+      align-items: start;
+
+      &::after {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        font-family: "Oswald", sans-serif;
+        font-size: 280px;
+        line-height: 207px;
+        color: $color-bg-add;
+        height:230px;
+        text-align: right;
+      }
+    }
+
+    &__text {
+      grid-column: 1/3;
+      grid-row: 2/2;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @each $icon in $icons {
+      @include img-block($icon, 80px, 80px);
+    }
+
+    @for $i from 1 to 5 {
+      @include number-block(nth($icons, $i), $i);
+    }
+  }
+
+  @media(min-width: $vp-desktop) {
+    &__item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      column-gap: 10px;
+    }
+
+    &__list {
+      padding-top: 71px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      column-gap: 80px;
+    }
+  }
+}
+

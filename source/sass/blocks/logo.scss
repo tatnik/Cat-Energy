@@ -1,0 +1,43 @@
+.logo {
+  opacity: 1;
+
+
+  &__img{
+    width: 34px;
+    height: 38px;
+    background-image: url("../img/logo.svg");
+  }
+
+  &__font{
+    width: 102px;
+    height: 19px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media(min-width: $vp-tablet) {
+
+      &__img{
+      width: 60px;
+      height: 50px;
+      background-image: url("../img/logo_tablet.svg");
+      margin-right: 12px;
+    }
+  }
+
+  @media(min-width: $vp-tablet) {
+
+    &__img{
+      width: 70px;
+      height: 60px;
+      background-image: url("../img/logo_desktop.svg");
+      margin-right:14px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.arrow-right {
+  .zero-centered();
+  .arrow-line(10px, 4px, &color-arrow);
+  .arrow(9px, $color-arrow);
+}
+
+.arrow($size; $color) {
+  width: 0;
+  height: 0;
+  border-width: $size;
+  border-style: solid;
+  border-color: $color;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-style: none;
+}
+
+.arrow-line($width; $height; $color) {
+  width: $width;
+  height: $height;
+  border-style: none;
+  background-color: $color;
+}
+
+.zero-centered() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

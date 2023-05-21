@@ -1,0 +1,10 @@
+.page-main {
+
+  @media (min-width: $vp-tablet) {
+    &__button {
+      padding-left: 26px;
+      padding-right: 26px;
+      width: auto;
+    }
+  }
+}

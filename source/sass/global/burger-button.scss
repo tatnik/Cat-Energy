@@ -1,0 +1,39 @@
+.burger-button{
+  cursor:pointer;
+  height: 26px;
+  background-color: $color-bg-base;
+  border: none;
+  padding-left: 0;
+  padding-right:0;
+
+  &__line1,
+  &__line2,
+  &__line3,{
+    width: 26px;
+    height: 2px;
+    margin: 5px 0;
+    transition: 0.3s;
+    display:block;
+    background-color: $color-add;
+  }
+
+  &:active{
+    opacity: 0.3;
+  }
+
+  &--nav-opened &__line1 {
+    transform: translate(0, 7px) rotate(-45deg) ;
+  }
+
+  &--nav-opened &__line3 {
+    transform: translate(0, -7px) rotate(45deg);
+  }
+
+  &--nav-opened &__line2 {
+    opacity: 0;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}

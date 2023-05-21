@@ -1,0 +1,128 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: transparent;
+  align-items: center;
+
+  &__image {
+    width: 311px;
+    height: 232px;
+    display: none;
+
+    &--current {
+      display: block;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 12px;
+  }
+
+  &__button {
+    color: $color-add;
+    background-color: transparent;
+    border: none;
+    padding: 3px 3px;
+    border-bottom-color: $color-add-opacity;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    cursor: pointer;
+
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+
+  &__toggle {
+    width: 84px;
+    height: 12px;
+    background: $color-bg-base;
+    border: 1px solid $color-border-special;
+    border-radius: 6px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    align-self: center;
+  }
+
+
+  &__toggle-button {
+    width: 35px;
+    height: 6px;
+    background: $color-bg-accent;
+    border-radius: 6px;
+  }
+
+  &__toggle-button--left {
+    transform: translate(3px, 3px);
+  }
+
+  &__toggle-button--right {
+    transform: translate(46px, 3px);
+  }
+
+
+  @media(min-width: $vp-tablet) {
+
+    &__image {
+      height: auto;
+      width: 708px;
+    }
+
+
+    &__button .title {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+
+    &__toggle {
+      width: 428px;
+      height: 6px;
+      background: $color-border-special;
+      border: none;
+    }
+
+    &__toggle-button {
+      background: $color-bg-base ;
+      width:32px;
+      height:32px;
+      border-radius:18px;
+      border: 1px solid $color-border-special;
+
+      &::after{
+        width: 8px;
+        height: 8px;
+        background: $color-bg-accent;
+        border-radius: 4px;
+        content: " ";
+        position: absolute;
+        left: 12px;
+        top: 12px;
+      }
+    }
+
+    &__toggle-button--left {
+      transform: translate(0, -15px);
+    }
+
+    &__toggle-button--right {
+      transform: translate(394px, -15px);
+    }
+
+  }
+  @media(min-width: $vp-desktop) {
+
+
+  }
+}

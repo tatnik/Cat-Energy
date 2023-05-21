@@ -1,0 +1,28 @@
+// colors
+
+$color-bg-base: #fff;
+$color-bg-add: #f2f2f2;
+$color-bg-accent: #68b738;
+$color-bg-accent-opacity: rgba(104, 183, 56, 0.85);
+$color-bg-accent-dark: #5eaa2f;
+$color-base: #444;
+$color-base-light: #666;
+$color-base-dark: #222;
+$color-add: #000;
+$color-add-opacity: rgba(0, 0, 0, 0.4);
+$color-accent: #fff;
+$color-line: #ff8282;
+$color-border:#e6e6e6;
+$color-border-special:#cdcdcd;
+
+$color-link: $color-base;
+$color-arrow: $color-add;
+
+// media
+
+$vp-tablet : 768px;
+$vp-desktop : 1440px;
+$max-width-content: 1220px;
+
+// arrow
+$arrow-right:'\2192';

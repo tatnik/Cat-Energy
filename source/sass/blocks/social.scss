@@ -1,0 +1,33 @@
+.social {
+  @mixin img-block($url, $width, $height) {
+    content: "";
+    width: $width;
+    height: $height;
+    background-image: url($url);
+    background-position: center;
+    color: $color-base-light;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  @media(min-width: $vp-tablet) {
+
+    &__list {
+      column-gap: 28px;
+    }
+  }
+}

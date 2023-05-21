@@ -1,0 +1,29 @@
+.address {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  font-style: normal;
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+
+  @media(min-width: $vp-tablet) {
+
+    text-align: right;
+
+    &__text {
+      font-size: 16px;
+    }
+
+  }
+
+  @media(min-width: $vp-desktop) {
+    text-align: left;
+  }
+
+}
+

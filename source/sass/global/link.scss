@@ -1,0 +1,42 @@
+.link {
+  background-color: transparent;
+  border-style: none;
+  text-decoration: none;
+
+  @include color-link();
+
+
+  &__icon {
+    & path {
+      fill: $color-base-light;
+      opacity: 1;
+    }
+
+    &:hover path {
+      fill: $color-bg-accent;
+      opacity: 1;
+    }
+
+    &:active path {
+      fill: $color-bg-accent;
+      opacity: 0.3;
+    }
+
+    &--stroke {
+      & path {
+        fill: none;
+        stroke: $color-base-light;
+      }
+
+      &:hover path {
+        fill: none;
+        stroke: $color-bg-accent;
+      }
+
+      &:active path {
+        fill: none;
+        stroke: $color-bg-accent;
+      }
+    }
+  }
+}

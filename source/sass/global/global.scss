@@ -1,0 +1,60 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.img {
+  border-style: none;
+}
+
+.list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin color-link($color:$color-link, $color-visited:$color-link, $color-focus:$color-link,  $color-hover:$color-link, $color-active:$color-link) {
+  color: $color;
+
+  &:visited {
+    color: $color-visited;
+  }
+
+  &:focus {
+    color: $color-focus;
+  }
+
+  &:hover {
+    color: $color-hover;
+  }
+
+  &:active {
+    color: $color-active;
+  }
+
+}
+
+.wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $vp-tablet) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @media (min-width: $vp-desktop) {
+    padding-right: 110px;
+    padding-left: 110px;
+    max-width: $max-width-content;
+  }
+}
