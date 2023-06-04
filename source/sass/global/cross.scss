@@ -1,0 +1,24 @@
+.cross {
+  display: flex;
+  flex-direction: row;
+
+  &__line-h,
+  &__line-v {
+    width: 2px;
+    height: 30px;
+    display: block;
+    background-color: $color-bg-add;
+    transition: 0.1s;
+  }
+
+  &__line-h {
+    transform: translate(-2px, 0) rotate(90deg);
+  }
+
+  @media (min-width: $vp-tablet) {
+    &__line-h,
+    &__line-v {
+      height: 60px;
+    }
+  }
+}
