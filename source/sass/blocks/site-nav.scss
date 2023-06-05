@@ -1,5 +1,4 @@
 .site-nav {
-
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   line-height: 20px;
@@ -29,7 +28,8 @@
     display: none;
   }
 
-  @media (max-width: $vp-tablet - 1px) {
+  @media (max-width: $vp-tablet-1) {
+    border-bottom: 1px solid $color-border;
 
     &__item {
       padding-top: 22px;
@@ -39,8 +39,7 @@
   }
 
   @media (min-width: $vp-tablet) {
-
-    flex-grow:  1;
+    flex-grow: 1;
     flex-shrink: 0;
 
     &__list {
@@ -62,20 +61,28 @@
   }
 
   @media (min-width: $vp-desktop) {
+    &__theme--add {
+      color: $color-accent;
+    }
 
     &__item {
       font-weight: 400;
       font-size: 20px;
       line-height: 30px;
-      color: $color-accent;
+    }
 
-      & .link {
-        @include color-link($color-accent, $color-accent, $color-accent, $color-accent, $color-accent)
-      }
+    &__theme--add .link {
+      @include color-link(
+        $color-accent,
+        $color-accent,
+        $color-accent,
+        $color-accent,
+        $color-accent
+      );
+    }
 
-      &--active {
-        border-bottom-color: $color-accent;
-      }
+    &__theme--add &__item--active {
+      border-bottom-color: $color-accent;
     }
   }
 }

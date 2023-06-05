@@ -30,6 +30,8 @@
 
   @media(max-width: $vp-tablet - 1px) {
 
+    padding-bottom: 22px;
+
     &__main {
       align-items: center;
       color: $color-accent;

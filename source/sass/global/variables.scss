@@ -12,17 +12,18 @@ $color-add: #000;
 $color-add-opacity: rgba(0, 0, 0, 0.4);
 $color-accent: #fff;
 $color-line: #ff8282;
-$color-border:#e6e6e6;
-$color-border-special:#cdcdcd;
+$color-border: #e6e6e6;
+$color-border-add: #d9d9d9;
+$color-border-special: #cdcdcd;
 
 $color-link: $color-base;
 $color-arrow: $color-add;
 
 // media
 
-$vp-tablet : 768px;
-$vp-desktop : 1440px;
+$vp-tablet: 768px;
+$vp-desktop: 1440px;
 $max-width-content: 1220px;
-
+$vp-tablet-1: $vp-tablet - 1px;
 // arrow
-$arrow-right:'\2192';
+$arrow-right: "\2192";

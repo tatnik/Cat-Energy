@@ -91,7 +91,11 @@
       }
     }
 
-    &__text {
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+      &__text {
       grid-column: 1/3;
       grid-row: 2/2;
       font-size: 16px;
