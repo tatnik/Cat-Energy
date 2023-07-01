@@ -2,14 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  &__title {
-    font-size: 36px;
-    line-height: 36px;
-    padding-top: 27px;
-    padding-bottom: 41px;
-    text-align: center;
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -30,8 +22,6 @@
   }
 
   @media (min-width: $vp-tablet) {
-    padding-left: 30px;
-    padding-right: 30px;
 
     &__title {
       font-size: 60px;
@@ -56,11 +46,7 @@
   }
 
   @media (min-width: $vp-desktop) {
-    padding-right: 110px;
-    padding-left: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $max-width-content;
+
 
     &__list {
       grid-template-columns: repeat(4, 1fr);

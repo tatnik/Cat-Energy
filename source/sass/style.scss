@@ -1,0 +1,38 @@
+// Global
+
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+@import "global/link.scss";
+@import "global/title.scss";
+@import "global/text.scss";
+@import "global/button.scss";
+@import "global/burger-button.scss";
+@import "global/cross.scss";
+
+// Blocks
+
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav";
+@import "blocks/site-nav";
+@import "blocks/promo.scss";
+@import "blocks/page-main.scss";
+@import "blocks/offers.scss";
+@import "blocks/offer.scss";
+@import "blocks/description.scss";
+@import "blocks/results.scss";
+@import "blocks/stats-list.scss";
+@import "blocks/slider.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/contacts.scss";
+@import "blocks/address.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+@import "blocks/catalog-page.scss";
+@import "blocks/catalog.scss";
+@import "blocks/add-catalog.scss";
+@import "blocks/line.scss";
+@import "blocks/card.scss";
+@import "blocks/form.scss";

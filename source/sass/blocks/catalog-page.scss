@@ -1,0 +1,22 @@
+.catalog-page {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 27px;
+    padding-bottom: 41px;
+    text-align: center;
+  }
+
+  @media (min-width: $vp-tablet) {
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      padding-top: 65px;
+      padding-bottom: 160px;
+      text-align: left;
+    }
+  }
+}

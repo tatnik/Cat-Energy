@@ -1,14 +1,37 @@
-.add-catalog{
+.add-catalog {
+  padding-top: 25px;
+
+  padding-bottom: &__body {
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  &__list {
+    border-top: 1px solid $color-border;
+  }
+
+  &__item {
+    border-bottom: 1px solid $color-border;
+  }
 
   &__promo {
-    background: url("/img/add_promo.png") 0 0 no-repeat ;
-    display: flex;
-    height:289px;
+    background: url("/img/add_promo.png") 0 0 no-repeat;
+    background-size: cover;
+    display: block;
+    height: 289px;
+    width: 100%;
+    padding-top: 58px;
   }
 
   &__promo-text {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: $color-accent;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   &__promo-text:before {
@@ -18,6 +41,95 @@
     height: 80px;
     background-image: url("/img/icon_gift.svg");
     background-repeat: no-repeat;
-    flex-shrink: 0;
+    padding-bottom: 48px;
+  }
+
+
+  @media (min-width: $vp-tablet) {
+    padding-top: 70px;
+    padding-bottom: 76px;
+
+    &__body {
+      padding-top: 80px;
+      row-gap: 70px;
+    }
+
+    &__list {
+      border-left: 1px solid $color-border;
+      border-right: 1px solid $color-border;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &__promo {
+      background: url("/img/add_promo_tablet.png") 0 0 no-repeat;
+      height: 142px;
+      background-size: cover;
+      position: relative;
+    }
+
+    &__promo-text {
+      padding-left: 60%;
+      padding-top: 20px;
+      align-items: flex-start;
+
+      &:before {
+        position: absolute;
+        top: 58px;
+        left: 80px;
+      }
+    }
+  }
+
+
+  @media(min-width: $vp-desktop) {
+    padding-top: 75px;
+    padding-bottom: 80px;
+
+
+    &__body {
+      display: grid;
+      grid-template-columns: 1fr 245px;
+      grid-gap: 80px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    &__list {
+      border-left: none;
+      border-right: none;
+    }
+
+    &__promo {
+      height: 100%;
+      background: url("/img/add_promo_desktop.png") 0 0 no-repeat;
+      background-size: cover;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__promo-text {
+      padding: 0;
+      align-items: center;
+    }
+
+    &__promo-text:before {
+      position: relative;
+      top: 58px;
+      left: 0;
+      display: block;
+      width: 78px;
+      height: 128px;
+      padding-bottom: 48px;
+    }
+
+
   }
 }

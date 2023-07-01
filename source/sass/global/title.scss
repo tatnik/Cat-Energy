@@ -4,34 +4,45 @@
   padding: 0;
   margin: 0;
 
+  &--upp {
+    text-transform: uppercase;
+  }
+
   &__line {
     font-size: 24px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+    line-height: 24px;
+    display: block;
+    padding-left: 22px;
+    padding-right: 22px;
+    position: relative;
 
     &:after {
       content: " ";
       background: $color-bg-accent;
       width: 100%;
       height: 2px;
-      margin-top: 12px;
-    }
+      position: absolute;
+      top: 17px;
+      z-index: -1;
 
-    @media(min-width: $vp-tablet) {
-
-      &:before {
-        content: " ";
-        background: $color-bg-accent;
-        width: 100%;
-        height: 2px;
-        margin-top: 12px;
-      }
     }
   }
 
-  &--upp {
-    text-transform: uppercase;
+  @media (min-width: $vp-tablet) {
+    &__line {
+      padding-left: 36px;
+      padding-right: 36px;
+
+    }
+  }
+
+
+  @media (min-width: $vp-desktop) {
+    &__line {
+      padding-left: 40px;
+      padding-right: 40px;
+
+    }
   }
 
 }
