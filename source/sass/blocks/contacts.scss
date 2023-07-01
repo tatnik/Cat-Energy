@@ -1,34 +1,38 @@
 .contacts {
 
-  position:relative;
+  position: relative;
 
-  &__card{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 28px 20px;
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
-  &__theme--add{
+  &__theme--add {
     background-color: $color-bg-base;
   }
 
   &__title {
     font-size: 16px;
     line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
 
   &__map {
-    width:100%;
+    width: 100%;
     height: 362px;
   }
 
-  &__map-pin{
+  &__map-pin {
     margin-right: auto;
     margin-left: auto;
     position: absolute;
-    left:0;
+    left: 0;
     right: 0;
     bottom: 49%;
   }
@@ -36,7 +40,7 @@
   @media(min-width: $vp-tablet) {
 
     &__card {
-      padding: 62px 72px 58px 72px;
+      padding: 62px 40px 58px 40px;
     }
 
     &__title {
@@ -52,16 +56,15 @@
   @media(min-width: $vp-desktop) {
 
     &__card {
-      padding: 62px 76px 58px 76px;
-      width: 418px;
-      position:absolute;
+      padding: 66px 76px 72px 76px;
+      position: absolute;
       margin-top: auto;
       margin-bottom: auto;
       top: 0;
-      bottom:0;
-      left: 110px;
+      bottom: 0;
       height: min-content;
       background-color: $color-bg-base;
+      column-gap: 87px;
     }
   }
 }
