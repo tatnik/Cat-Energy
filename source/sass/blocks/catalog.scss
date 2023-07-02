@@ -1,6 +1,7 @@
 .catalog {
   display: flex;
   flex-direction: column;
+  padding-top: 4px;
 
   &__list {
     display: flex;
@@ -8,6 +9,7 @@
   }
 
   @media (max-width: $vp-tablet-1) {
+
     &__title {
       border-top: 1px solid $color-border-add;
     }
@@ -33,6 +35,7 @@
   }
 
   @media (min-width: $vp-tablet) {
+    padding-top: 104px;
 
     &__title {
       font-size: 60px;

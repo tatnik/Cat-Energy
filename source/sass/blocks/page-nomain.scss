@@ -1,11 +1,11 @@
-.catalog-page {
+.page-nomain {
   display: block;
 
   &__title {
     font-size: 36px;
     line-height: 36px;
-    padding-top: 27px;
-    padding-bottom: 41px;
+    padding-top: 28px;
+    padding-bottom: 36px;
     text-align: center;
   }
 
@@ -14,7 +14,7 @@
       font-size: 60px;
       line-height: 60px;
       padding-top: 65px;
-      padding-bottom: 160px;
+      padding-bottom: 56px;
       text-align: left;
     }
   }
