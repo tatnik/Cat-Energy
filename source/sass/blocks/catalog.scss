@@ -17,7 +17,18 @@
     }
 
     &__item {
-      border-top: 1px solid $color-border;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 1px;
+        background-color: $color-border;
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 120%;
+      }
+
     }
   }
 

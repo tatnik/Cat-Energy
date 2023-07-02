@@ -1,11 +1,16 @@
 .add-catalog {
   padding-top: 25px;
+  padding-bottom: 35px;
 
-  padding-bottom: &__body {
+  &__body {
     padding-top: 36px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
+  }
+
+  add-catalog__body {
+    padding-top: 35px;
   }
 
   &__list {
