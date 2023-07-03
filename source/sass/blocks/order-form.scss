@@ -1,0 +1,32 @@
+.order-form {
+  &__cat-data {
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  &__program {
+    padding-top: 14px;
+    padding-bottom: 25px;
+  }
+
+  &__comment {
+    padding-top: 26px;
+    padding-bottom: 24px;
+
+    & .title {
+      display: inline-block;
+    }
+  }
+
+  &__contacts {
+    margin-top: 26px;
+    padding-top: 20px;
+  }
+
+
+
+  &__additions {
+    padding-top: 26px;
+    padding-bottom: 24px;
+  }
+}
