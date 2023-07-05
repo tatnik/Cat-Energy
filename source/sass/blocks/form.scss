@@ -81,6 +81,25 @@
         border: 1px solid $color-border-special;
       }
     }
+
+    &--check {
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: $color-bg-base;
+        flex-shrink: 0;
+        border: 1px solid $color-border-special;
+      }
+    }
   }
 
   &__field {
@@ -112,6 +131,16 @@
       position: absolute;
       bottom: 12px;
       left: 12px;
+    }
+
+    &--check:checked+.form__label--check::after {
+      content: "";
+      width: 26px;
+      height: 26px;
+      background: url("../img/icon_tick.svg");
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
     }
 
     &--area {
