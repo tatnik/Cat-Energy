@@ -60,6 +60,27 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    align-items: center;
+
+    &--radio {
+
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      align-items: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        background-color: $color-bg-base;
+        flex-shrink: 0;
+        border-radius: 40px;
+        border: 1px solid $color-border-special;
+      }
+    }
   }
 
   &__field {
@@ -70,6 +91,7 @@
     line-height: 30px;
     flex-grow: 1;
 
+
     &::placeholder {
       text-transform: uppercase;
       font-family: "Oswald", sans-serif;
@@ -79,10 +101,17 @@
       color: $color-base;
     }
 
-    &--radio,
-    &--check {
-      order: -1;
-      flex-grow: 0;
+
+
+    &--radio:checked+.form__label--radio::after {
+      content: "";
+      width: 18px;
+      height: 18px;
+      border-radius: 18px;
+      background-color: $color-bg-accent;
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
     }
 
     &--area {
