@@ -52,6 +52,11 @@
   @media (min-width: $vp-tablet) {
     padding-right: 30px;
     padding-left: 30px;
+
+    &--form {
+      padding-right: 70px;
+      padding-left: 70px;
+    }
   }
 
   @media (min-width: $vp-desktop) {

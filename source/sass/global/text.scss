@@ -3,9 +3,16 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin:0;
+  margin: 0;
 
   &--small {
     font-size: 14px;
+    line-height: 16px;
+  }
+
+  @media(min-width:$vp-tablet) {
+    &--small {
+      font-size: 16px;
+    }
   }
 }

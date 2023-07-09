@@ -1,4 +1,6 @@
 .order-form {
+  padding-bottom: 12px;
+
   &__cat-data {
     padding-top: 10px;
     padding-bottom: 24px;
@@ -28,5 +30,50 @@
   &__additions {
     padding-top: 26px;
     padding-bottom: 24px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .text {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media(min-width: $vp-tablet) {
+    padding-bottom: 72px;
+
+    &__additions,
+    &__footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+
+    }
+
+    &__button {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media(min-width: $vp-desktop) {
+    padding-bottom: 80px;
+
+    &__additions {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    &__footer {
+      column-gap: 80px;
+    }
   }
 }
