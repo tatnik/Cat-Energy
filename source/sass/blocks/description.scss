@@ -1,6 +1,9 @@
 .description {
 
-  $icons: "leaf", "tub", "eat", "alarm";
+  $icons: "leaf",
+  "tub",
+  "eat",
+  "alarm";
 
   @mixin img-block($icon-name, $width, $height) {
     &__item--icon-#{$icon-name}:before {
@@ -17,7 +20,7 @@
 
   @mixin number-block($icon-name, $counter) {
     &__item--icon-#{$icon-name}:after {
-       content: '#{$counter}';
+      content: '#{$counter}';
     }
   }
 
@@ -38,7 +41,6 @@
   }
 
   &__text {
-    font-size: 14px;
     line-height: 18px;
     position: relative;
     z-index: 2;
@@ -86,7 +88,7 @@
         font-size: 280px;
         line-height: 207px;
         color: $color-bg-add;
-        height:230px;
+        height: 230px;
         text-align: right;
       }
     }
@@ -95,10 +97,10 @@
       font-size: 60px;
       line-height: 60px;
     }
-      &__text {
+
+    &__text {
       grid-column: 1/3;
       grid-row: 2/2;
-      font-size: 16px;
       line-height: 24px;
     }
 
@@ -126,4 +128,3 @@
     }
   }
 }
-
