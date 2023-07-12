@@ -22,12 +22,18 @@
   }
 
   &__promo {
-    background: url("/img/add_promo.png") 0 0 no-repeat;
+    background: url("/img/add_promo-mobile.png") 0 0 no-repeat;
     background-size: cover;
     display: block;
     height: 289px;
     width: 100%;
     padding-top: 58px;
+
+    @media(min-resolution: 2dppx) {
+      background: url("/img/add_promo-mobile@2x.png") 0 0 no-repeat;
+      background-size: cover;
+
+    }
   }
 
   &__promo-text {
@@ -74,6 +80,12 @@
       height: 142px;
       background-size: cover;
       position: relative;
+
+      @media(min-resolution: 2dppx) {
+        background: url("/img/add_promo_tablet@2x.png") 0 0 no-repeat;
+        background-size: cover;
+
+      }
     }
 
     &__promo-text {
@@ -118,6 +130,11 @@
       padding-top: 0;
       display: flex;
       flex-direction: column;
+
+      @media(min-resolution: 2dppx) {
+        background: url("/img/add_promo_desktop@2x.png") 0 0 no-repeat;
+        background-size: cover;
+      }
     }
 
     &__promo-text {
