@@ -1,17 +1,6 @@
 .logo {
   opacity: 1;
-
-
-  &__img{
-    width: 34px;
-    height: 38px;
-    background-image: url("../img/logo.svg");
-  }
-
-  &__font{
-    width: 102px;
-    height: 19px;
-  }
+  display: block;
 
   &:hover {
     opacity: 0.8;
@@ -21,23 +10,44 @@
     opacity: 0.6;
   }
 
-  @media(min-width: $vp-tablet) {
+  &__nomobile {
+    display: none;
+  }
 
-      &__img{
-      width: 60px;
-      height: 50px;
-      background-image: url("../img/logo_tablet.svg");
-      margin-right: 12px;
-    }
+  &__font {
+    width: 102px;
+    height: 19px;
+  }
+
+  &__font--cat {
+    fill: $color-base-dark;
+  }
+
+  &__font--energy {
+    fill: $color-base;
   }
 
   @media(min-width: $vp-tablet) {
 
-    &__img{
-      width: 70px;
+    &__mobile,
+    &__rays {
+      display: none;
+    }
+
+    &__nomobile {
+      display: block;
+      height: 52px;
+    }
+  }
+
+  @media(min-width: $vp-desktop) {
+
+    &__rays {
+      display: block;
+    }
+
+    &__nomobile {
       height: 60px;
-      background-image: url("../img/logo_desktop.svg");
-      margin-right:14px;
     }
   }
 }
