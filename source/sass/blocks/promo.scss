@@ -1,11 +1,11 @@
 .promo {
 
   &__main {
-  display: flex;
-  flex-direction: column;
-  background-origin: border-box;
-  position: relative;
-  padding: 30px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    background-origin: border-box;
+    position: relative;
+    padding: 30px 20px 0 20px;
   }
 
   &__title {
@@ -28,15 +28,25 @@
     display: none;
   }
 
-  @media(max-width: $vp-tablet - 1px) {
+  @media(max-width: $vp-tablet-1) {
 
     padding-bottom: 22px;
 
     &__main {
       align-items: center;
       color: $color-accent;
-      background: url("../img/promo_bg-mobile-green.png") no-repeat top;
-      background-size: auto 320px;
+      background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, #fff 302px),
+        url("../img/promo_bg-mobile.png") no-repeat top,
+        linear-gradient(#444 320px, #fff 302px);
+      background-size: auto, 302px, auto;
+
+      @media(min-resolution: 2dppx) {
+        background-color: $color-base;
+        background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, #fff 302px),
+          url("../img/promo_bg-mobile@2x.png") no-repeat top,
+          linear-gradient(#444 320px, #fff 302px);
+        background-size: auto, 302px, auto;
+      }
     }
 
     &__button {
@@ -81,7 +91,7 @@
     &__img {
       width: 709px;
       height: 609px;
-      margin-top: -84px;
+      margin-top: -70px;
       position: relative;
       z-index: -1;
     }
@@ -100,12 +110,20 @@
       margin-left: auto;
     }
 
-    &__bg{
-      display:block;
+    &__bg {
+      display: block;
       background-image: linear-gradient($color-bg-accent-opacity, $color-bg-accent-opacity),
-      url("../img/promo_bg.png");
+        url("../img/promo_bg.png");
       background-repeat: no-repeat, no-repeat;
       background-size: auto, cover;
+
+      @media(min-resolution: 2dppx) {
+        background-image: linear-gradient($color-bg-accent-opacity, $color-bg-accent-opacity),
+          url("../img/promo_bg@2x.png");
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto, cover;
+
+      }
 
     }
 
@@ -117,11 +135,9 @@
       width: 552px;
       height: 499px;
       position: absolute;
-      left: 81%;
-      z-index: 0;
+      left: 77.5%;
+      z-index: 1;
+      top: 220px;
     }
   }
 }
-
-
-

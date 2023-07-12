@@ -60,7 +60,12 @@
         <a href="order-form.html" class="promo__button button">
           <span class="button__text">Подобрать программу</span>
         </a>
-        <img class="img promo__img" src="img/promo.png" alt="Баночка с кошачьим кормом Cat Energy">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/promo-desktop.png 1x, img/promo-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/promo-tablet.png 1x, img/promo-tablet@2x.png 2x">
+          <img class="img promo__img" src="img/promo-mobile.png"
+            srcset="img/promo-mobile.png 1x, img/promo-mobile@2x.png 2x" alt="Баночка с кошачьим кормом Cat Energy">
+        </picture>
       </div>
       <!-- Background only for desktop -->
       <div class="promo__bg"></div>
@@ -179,10 +184,16 @@
 
           <!-- Toggle -->
           <div class="results__slider slider">
-            <img src="img/cat-before.png" alt="Очень толстый кот"
-              class="slider__image slider__image--1 slider__image--current" width="311" height="232">
-            <img src="img/cat-after.png" alt="Очень худой кот" class="slider__image slider__image--2" width="311"
-              height="232">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
+              <img src="img/cat-before-mobile.png" alt="Очень толстый кот" class="slider__image slider__image--1"
+                width="311" height="232">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/cat-after.png 1x, img/cat-after@2x.png 2x">
+              <img src="img/cat-after-mobile.png" alt="Очень худой кот"
+                class="slider__image slider__image--2  slider__image--current" width="311" height="232">
+            </picture>
             <div class="slider__buttons">
               <button class="slider__button slider__button--1 slider__button--current" type="button"><span
                   class="title title--upp">Было</span></button>
