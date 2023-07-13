@@ -23,6 +23,7 @@
 
   &__text {
     line-height: 18px;
+    color: $color-base;
   }
 
   @media(min-width: $vp-tablet) {

@@ -7,33 +7,31 @@
 
 
   &__icon {
-    & path {
-      fill: $color-base-light;
-      opacity: 1;
-    }
+    fill: $color-base-light;
+    opacity: 1;
 
-    &:hover path {
+
+    &:hover {
       fill: $color-bg-accent;
       opacity: 1;
     }
 
-    &:active path {
+    &:active {
       fill: $color-bg-accent;
       opacity: 0.3;
     }
 
     &--stroke {
-      & path {
-        fill: none;
-        stroke: $color-base-light;
-      }
+      fill: none;
+      stroke: $color-base-light;
 
-      &:hover path {
+
+      &:hover {
         fill: none;
         stroke: $color-bg-accent;
       }
 
-      &:active path {
+      &:active {
         fill: none;
         stroke: $color-bg-accent;
       }

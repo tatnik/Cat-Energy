@@ -38,19 +38,21 @@
   }
 
   &__link {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 17px;
+    align-items: center;
+    margin-top: 15px;
 
-
-    &:after {
-      content: $arrow-right;
-      margin-left: 10px;
-      position: relative;
-      top: -3px;
-    }
 
     &:active {
       opacity: 0.3;
     }
+  }
+
+  &__icon {
+    fill: $color-add;
+    stroke: $color-add;
   }
 
   @media(min-width: $vp-tablet) {
@@ -77,8 +79,14 @@
       border-bottom: none;
       line-height: 24px;
     }
-  }
 
+
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+      column-gap: 25px;
+    }
+  }
 
   @media(min-width: $vp-desktop) {
 
@@ -100,6 +108,10 @@
     &__text {
       padding-top: 73px;
       padding-right: 0;
+    }
+
+    &__link {
+      column-gap: 28px;
     }
   }
 }
