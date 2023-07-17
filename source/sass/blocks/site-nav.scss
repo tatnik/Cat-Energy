@@ -42,6 +42,10 @@
     flex-grow: 1;
     flex-shrink: 0;
 
+    &--closed {
+      display: block;
+    }
+
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -72,13 +76,11 @@
     }
 
     &__theme--add .link {
-      @include color-link(
+      @include color-link($color-accent,
         $color-accent,
         $color-accent,
         $color-accent,
-        $color-accent,
-        $color-accent
-      );
+        $color-accent );
     }
 
     &__theme--add &__item--active {

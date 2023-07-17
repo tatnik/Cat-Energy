@@ -200,26 +200,33 @@
 
           <!-- Toggle -->
           <div class="results__slider slider">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
-              <img src="img/cat-before-mobile.png" alt="Очень толстый кот"
-                srcset="img/cat-before-mobile.png 1x, img/cat-before-mobile@2x.png 2x"
-                class="slider__image slider__image--1" width="311" height="232">
-            </picture>
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/cat-after.png 1x, img/cat-after@2x.png 2x">
-              <img src="img/cat-after-mobile.png" alt="Очень худой кот"
-                srcset="img/cat-after-mobile.png 1x, img/cat-after-mobile@2x.png 2x"
-                class="slider__image slider__image--2  slider__image--current" width="311" height="232">
-            </picture>
+            <ul class="slider__list">
+              <li class="slider__slide slider__slide--1 slider__slide--current">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x">
+                  <img src="img/cat-before-mobile.png" alt="Очень толстый кот"
+                    srcset="img/cat-before-mobile.png 1x, img/cat-before-mobile@2x.png 2x"
+                    class="slider__image slider__image--1" width="320" height="240">
+                </picture>
+              </li>
+              <li class="slider__slide slider__slide--2">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cat-after.png 1x, img/cat-after@2x.png 2x">
+                  <img src="img/cat-after-mobile.png" alt="Очень худой кот"
+                    srcset="img/cat-after-mobile.png 1x, img/cat-after-mobile@2x.png 2x"
+                    class="slider__image slider__image--2  slider__image--current" width="320" height="240">
+                </picture>
+              </li>
+            </ul>
+
             <div class="slider__buttons">
-              <button class="slider__button slider__button--1 slider__button--current" type="button"><span
-                  class="title title--upp">Было</span></button>
+              <button class="slider__button slider__button--1 slider__button--current" type="button">
+                <span class="title title--upp">Было</span></button>
               <div class="slider__toggle">
                 <div class="slider__toggle-button slider__toggle-button--left"></div>
               </div>
-
-              <button class="slider__button slider__button--2" type="button"><span class="title title--upp">Стало</span>
+              <button class="slider__button slider__button--2" type="button">
+                <span class="title title--upp">Стало</span>
               </button>
             </div>
           </div>
@@ -319,6 +326,7 @@
   </footer>
 
   <script>
+    // mobile menu
     const navMain = document.querySelector('.site-nav');
     const navToggle = document.querySelector('.burger-button');
 
@@ -334,17 +342,59 @@
       }
     });
 
-    const mediaQuery = window.matchMedia('(min-width: 768px)')
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
 
     function handleTabletChange(e) {
       if (e.matches) {
-        navMain.classList.remove('site-nav--closed');
-        navToggle.classList.add('burger-button--nav-opened');
+        navMain.classList.add('site-nav--closed');
+        navToggle.classList.remove('burger-button--nav-opened');
       }
     }
 
     mediaQuery.addEventListener("change", handleTabletChange);
     handleTabletChange(mediaQuery)
+
+    // slider
+    const sliderToggle = document.querySelector('.slider__toggle');
+    const sliderToggleButton = document.querySelector('.slider__toggle-button');
+    const sliderButton1 = document.querySelector('.slider__button--1');
+    const sliderButton2 = document.querySelector('.slider__button--2');
+    const sliderSlide1 = document.querySelector('.slider__slide--1');
+    const sliderSlide2 = document.querySelector('.slider__slide--2');
+
+    function sliderToLeft() {
+      sliderToggleButton.classList.add('slider__toggle-button--left');
+      sliderToggleButton.classList.remove('slider__toggle-button--right');
+      sliderButton1.classList.add('slider__button--current');
+      sliderButton2.classList.remove('slider__button--current');
+      sliderSlide1.classList.add('slider__slide--current');
+      sliderSlide2.classList.remove('slider__slide--current');
+    }
+
+    function sliderToRight() {
+      sliderToggleButton.classList.remove('slider__toggle-button--left');
+      sliderToggleButton.classList.add('slider__toggle-button--right');
+      sliderButton1.classList.remove('slider__button--current');
+      sliderButton2.classList.add('slider__button--current');
+      sliderSlide1.classList.remove('slider__slide--current');
+      sliderSlide2.classList.add('slider__slide--current');
+    }
+
+    sliderButton1.addEventListener('click', function () {
+      sliderToLeft();
+    })
+
+    sliderButton2.addEventListener('click', function () {
+      sliderToRight();
+    })
+
+    sliderToggle.addEventListener('click', function () {
+      if (sliderToggleButton.classList.contains('slider__toggle-button--left')) {
+        sliderToRight();
+      } else {
+        sliderToLeft();
+      }
+    })
 
   </script>
 </body>

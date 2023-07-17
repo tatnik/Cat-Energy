@@ -1,13 +1,13 @@
 .slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: transparent;
-  align-items: center;
 
-  &__image {
-    width: 311px;
-    height: 232px;
+  &__list {
+    display: block;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__slide {
+    width: 100%;
     display: none;
 
     &--current {
@@ -15,32 +15,43 @@
     }
   }
 
+  &__image {
+    width: 320px;
+    height: 240px;
+  }
+
   &__buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     column-gap: 12px;
+    padding-top: 25px;
   }
 
   &__button {
     color: $color-add;
     background-color: transparent;
-    border: none;
     padding: 3px 3px;
-    border-bottom-color: $color-add-opacity;
-    border-bottom-style: dotted;
-    border-bottom-width: 1px;
     flex-shrink: 0;
     flex-grow: 0;
+    border: none;
+    border-bottom-color: transparent;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
     cursor: pointer;
 
+    &--current {
+      border-bottom-color: $color-add-opacity;
+      border-bottom-style: dotted;
+    }
 
     &:hover {
       border-bottom-style: solid;
+      border-bottom-color: $color-add-opacity;
     }
 
     &:active {
-      border: none;
+      border-bottom-color: transparent;
     }
   }
 
@@ -53,6 +64,7 @@
     flex-shrink: 1;
     flex-grow: 0;
     align-self: center;
+    cursor: pointer;
   }
 
 
@@ -74,9 +86,39 @@
 
   @media(min-width: $vp-tablet) {
 
-    &__image {
-      height: auto;
+    &__list {
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+      margin: 0 auto;
       width: 708px;
+    }
+
+
+    &__slide {
+
+      width: 50%;
+      overflow: hidden;
+      display: none;
+
+      &--current {
+        display: block;
+        width: 100%;
+      }
+
+      &--2 {
+        position: relative;
+      }
+    }
+
+    &__image {
+      height: 520px;
+      width: auto;
+
+      &--2 {
+        position: absolute;
+        right: 0;
+      }
     }
 
 
@@ -95,12 +137,12 @@
 
     &__toggle-button {
       background: $color-bg-base ;
-      width:32px;
-      height:32px;
-      border-radius:18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 18px;
       border: 1px solid $color-border-special;
 
-      &::after{
+      &::after {
         width: 8px;
         height: 8px;
         background: $color-bg-accent;
@@ -121,8 +163,6 @@
     }
 
   }
-  @media(min-width: $vp-desktop) {
 
-
-  }
+  @media(min-width: $vp-desktop) {}
 }
