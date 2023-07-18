@@ -78,12 +78,13 @@
     position: relative;
 
     &--left {
-      transform: translate(3px, 0);
+      left: 3px;
     }
 
     &--right {
-      transform: translate(46px, 0);
+      left: 46px;
     }
+
   }
 
   @media(min-width: $vp-tablet) {
@@ -145,9 +146,10 @@
       background: $color-bg-base ;
       width: 32px;
       height: 32px;
-      border-radius: 18px;
+      border-radius: 50%;
       border: 1px solid $color-border-special;
       cursor: pointer;
+
 
       &::after {
         width: 8px;
@@ -160,6 +162,13 @@
         top: 12px;
       }
 
+      &:hover {
+        box-shadow: 0 2px 2px $color-border-special;
+      }
+
+      &:active {
+        border-color: $color-bg-accent ;
+      }
 
       &--left {
         transform: none;
@@ -170,7 +179,7 @@
       &--right {
         transform: none;
         position: absolute;
-        left: 94%;
+        left: 394px;
       }
     }
 

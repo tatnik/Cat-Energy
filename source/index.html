@@ -71,6 +71,12 @@
           <span class="button__text">Подобрать программу</span>
         </a>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/promo-desktop.webp 1x, img/promo-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/promo-mobile.webp 1x, img/promo-mobile@2x.webp 2x">
+
           <source media="(min-width: 1440px)" srcset="img/promo-desktop.png 1x, img/promo-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/promo-tablet.png 1x, img/promo-tablet@2x.png 2x">
           <img class="img promo__img" src="img/promo-mobile.png"
@@ -223,7 +229,7 @@
               <button class="slider__button slider__button--1 slider__button--current" type="button">
                 <span class="title title--upp">Было</span></button>
               <div class="slider__toggle">
-                <div class="slider__toggle-button"></div>
+                <div class="slider__toggle-button slider__toggle-button--left"></div>
               </div>
               <button class="slider__button slider__button--2" type="button">
                 <span class="title title--upp">Стало</span>
@@ -354,6 +360,8 @@
     const sliderSlide1 = document.querySelector('.slider__slide--1');
     const sliderSlide2 = document.querySelector('.slider__slide--2');
 
+
+
     function sliderToLeft() {
       sliderToggleButton.style = "";
       sliderToggleButton.classList.add('slider__toggle-button--left');
@@ -393,7 +401,7 @@
 
     // cat-slider for tablet and desktop
 
-    sliderToggleButton.onmousedown = function (event) {
+    function onMouseDown(event) {
 
       let sliderRect = sliderToggle.getBoundingClientRect();
       let sliderToggleButtonRect = sliderToggleButton.getBoundingClientRect();
@@ -432,21 +440,28 @@
     const mediaQuery = window.matchMedia('(max-width: 768px)')
 
     function handleTabletChange(e) {
+
       if (e.matches) {
-        // for menu
+        // for menu mobile
         navMain.classList.add('site-nav--closed');
         navToggle.classList.remove('burger-button--nav-opened');
-        // for cat-slider
-        sliderToggle.addEventListener('click', onSliderClick);;
+        // for cat-slider mobile
+        sliderToggle.addEventListener('click', onSliderClick);
+        sliderToggleButton.removeEventListener('mousedown', onMouseDown);
+
       }
       else {
-        // for cat-slider
+        // for cat-slider tablet & desktop
         sliderToggle.removeEventListener('click', onSliderClick);
+        sliderToggleButton.addEventListener('mousedown', onMouseDown);
+
+
       }
     }
 
-    mediaQuery.addEventListener("change", handleTabletChange);
     handleTabletChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleTabletChange);
+
 
   </script>
 </body>
