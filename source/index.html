@@ -223,7 +223,7 @@
               <button class="slider__button slider__button--1 slider__button--current" type="button">
                 <span class="title title--upp">Было</span></button>
               <div class="slider__toggle">
-                <div class="slider__toggle-button slider__toggle-button--left"></div>
+                <div class="slider__toggle-button"></div>
               </div>
               <button class="slider__button slider__button--2" type="button">
                 <span class="title title--upp">Стало</span>
@@ -326,7 +326,9 @@
   </footer>
 
   <script>
+
     // mobile menu
+
     const navMain = document.querySelector('.site-nav');
     const navToggle = document.querySelector('.burger-button');
 
@@ -342,19 +344,9 @@
       }
     });
 
-    const mediaQuery = window.matchMedia('(max-width: 768px)')
 
-    function handleTabletChange(e) {
-      if (e.matches) {
-        navMain.classList.add('site-nav--closed');
-        navToggle.classList.remove('burger-button--nav-opened');
-      }
-    }
+    // cat-slider for mobile
 
-    mediaQuery.addEventListener("change", handleTabletChange);
-    handleTabletChange(mediaQuery)
-
-    // slider
     const sliderToggle = document.querySelector('.slider__toggle');
     const sliderToggleButton = document.querySelector('.slider__toggle-button');
     const sliderButton1 = document.querySelector('.slider__button--1');
@@ -363,6 +355,7 @@
     const sliderSlide2 = document.querySelector('.slider__slide--2');
 
     function sliderToLeft() {
+      sliderToggleButton.style = "";
       sliderToggleButton.classList.add('slider__toggle-button--left');
       sliderToggleButton.classList.remove('slider__toggle-button--right');
       sliderButton1.classList.add('slider__button--current');
@@ -372,6 +365,7 @@
     }
 
     function sliderToRight() {
+      sliderToggleButton.style = "";
       sliderToggleButton.classList.remove('slider__toggle-button--left');
       sliderToggleButton.classList.add('slider__toggle-button--right');
       sliderButton1.classList.remove('slider__button--current');
@@ -382,19 +376,77 @@
 
     sliderButton1.addEventListener('click', function () {
       sliderToLeft();
-    })
+    });
 
     sliderButton2.addEventListener('click', function () {
       sliderToRight();
-    })
+    });
 
-    sliderToggle.addEventListener('click', function () {
+    function onSliderClick() {
       if (sliderToggleButton.classList.contains('slider__toggle-button--left')) {
         sliderToRight();
       } else {
         sliderToLeft();
       }
-    })
+    }
+
+
+    // cat-slider for tablet and desktop
+
+    sliderToggleButton.onmousedown = function (event) {
+
+      let sliderRect = sliderToggle.getBoundingClientRect();
+      let sliderToggleButtonRect = sliderToggleButton.getBoundingClientRect();
+      let shiftX = event.pageX - sliderToggleButtonRect.x;
+      let centerToggle = (sliderRect.width - 32) / 2;
+      let lastX = 0;
+
+      function onMouseMove(event) {
+        let x = event.pageX - sliderRect.x - shiftX;
+        if (x < 0) x = 0;
+        if (x > sliderToggle.clientWidth - sliderToggleButton.offsetWidth)
+          x = sliderToggle.clientWidth - sliderToggleButton.offsetWidth;
+        sliderToggleButton.style.left = x + "px";
+        lastX = x;
+      }
+
+      document.addEventListener("mousemove", onMouseMove);
+
+      function onMouseUp() {
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+        if (lastX > centerToggle) {
+          sliderToRight();
+        }
+        else {
+          sliderToLeft();
+        }
+      };
+
+      document.addEventListener("mouseup", onMouseUp);
+    }
+
+
+    // mediaQuery
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+    function handleTabletChange(e) {
+      if (e.matches) {
+        // for menu
+        navMain.classList.add('site-nav--closed');
+        navToggle.classList.remove('burger-button--nav-opened');
+        // for cat-slider
+        sliderToggle.addEventListener('click', onSliderClick);;
+      }
+      else {
+        // for cat-slider
+        sliderToggle.removeEventListener('click', onSliderClick);
+      }
+    }
+
+    mediaQuery.addEventListener("change", handleTabletChange);
+    handleTabletChange(mediaQuery);
 
   </script>
 </body>
