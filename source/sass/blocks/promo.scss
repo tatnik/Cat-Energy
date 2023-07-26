@@ -5,12 +5,13 @@
     flex-direction: column;
     background-origin: border-box;
     position: relative;
-    padding: 30px 20px 0 20px;
+    padding: 25px 20px 0 20px;
   }
 
   &__title {
     font-size: 36px;
     line-height: 36px;
+    text-align: center;
   }
 
   &__subtitle {

@@ -10,6 +10,11 @@
     opacity: 0.6;
   }
 
+  &__mobile {
+    height: 38px;
+    width: auto;
+  }
+
   &__nomobile {
     display: none;
   }

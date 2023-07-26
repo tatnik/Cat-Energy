@@ -1,9 +1,10 @@
 .slider {
+  align-self: center;
 
   &__list {
     display: block;
-    width: 320px;
-    margin: 0 auto;
+    margin: 0 -20px;
+    padding: 0;
   }
 
   &__slide {
@@ -25,7 +26,7 @@
     flex-direction: row;
     justify-content: center;
     column-gap: 12px;
-    padding-top: 25px;
+    padding-top: 15px;
   }
 
   &__button {
@@ -39,6 +40,7 @@
     border-bottom-style: dotted;
     border-bottom-width: 1px;
     cursor: pointer;
+    font-size: 16px;
 
     &--current {
       border-bottom-color: $color-add-opacity;
