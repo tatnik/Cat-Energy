@@ -29,9 +29,9 @@
   @media(min-width: $vp-tablet) {
 
     background-color: $color-bg-base;
-    background-image: linear-gradient($color-bg-base 55%, $color-bg-add 55%);
-    padding-top: 43px;
-    padding-bottom: 64px;
+    background-image: linear-gradient($color-bg-base 59%, $color-bg-add 59%);
+    padding-top: 77px;
+    padding-bottom: 68px;
 
     &__tab {
       row-gap: 59px;
@@ -39,6 +39,7 @@
 
     &__description {
       row-gap: 55px;
+      padding-bottom: 8px;
     }
 
     &__text {

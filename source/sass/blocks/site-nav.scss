@@ -51,12 +51,13 @@
       flex-wrap: wrap;
       column-gap: 35px;
       justify-content: flex-end;
+      padding-top: 7px;
     }
 
     &__item {
       font-weight: 400;
       font-size: 18px;
-      line-height: 24px;
+      line-height: 40px;
 
       &--active {
         border-bottom: 2px solid $color-bg-accent;

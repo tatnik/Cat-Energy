@@ -92,39 +92,22 @@
   @media(min-width: $vp-tablet) {
 
     &__list {
-      display: flex;
-      flex-direction: row;
-      background-color: transparent;
-      margin: 0 auto;
-      width: 708px;
-    }
-
-
-    &__slide {
-      display: block;
-      overflow: hidden;
-      width: 0;
-
-
-      &--current {
-        width: 100%;
-      }
-
-      &--2 {
-        position: relative;
-      }
+      margin: 0;
     }
 
     &__image {
       height: 520px;
       width: auto;
-
-      &--2 {
-        position: absolute;
-        right: 0;
-      }
     }
 
+    &__slide--2 {
+      padding-left: 40px;
+      padding-top: 25px;
+    }
+
+    &__buttons {
+      column-gap: 20px;
+    }
 
     &__button .title {
       font-size: 20px;

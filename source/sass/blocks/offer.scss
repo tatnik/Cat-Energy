@@ -57,7 +57,7 @@
 
   @media(min-width: $vp-tablet) {
 
-    padding: 77px 52px 57px 52px;
+    padding: 76px 53px 57px 53px;
 
     &__title {
       font-size: 36px;
@@ -69,15 +69,20 @@
         width: 268px;
         height: 211px;
         left: 100%;
-        top: 50%;
-        transform: translate(-320px, -50%);
+        top: 80px;
+        transform: translate(-298px, 0);
       }
     }
 
     &__text {
-      padding-right: 314px;
+      padding-top: 25px;
+      padding-right: 230px;
       border-bottom: none;
       line-height: 24px;
+
+      &--less {
+        padding-right: 260px;
+      }
     }
 
 
@@ -85,6 +90,7 @@
       font-size: 20px;
       line-height: 30px;
       column-gap: 25px;
+      margin-top: 30px;
     }
   }
 

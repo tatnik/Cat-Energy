@@ -8,6 +8,10 @@
     justify-content: stretch;
   }
 
+  &__contacts {
+    line-height: 0;
+  }
+
   &__logo {
     padding-top: 33px;
     padding-bottom: 28px;
@@ -40,13 +44,14 @@
   @media(min-width: $vp-tablet) {
 
     &__footer {
-      padding-top: 55px;
+      padding-top: 47px;
       padding-bottom: 61px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
+
 
     &__logo,
     &__social,
@@ -55,9 +60,16 @@
       padding-bottom: 0;
     }
 
+    &__logo {
+      padding-top: 4px;
+    }
+
     &__copyright {
       font-size: 16px;
       line-height: 18px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-right: -5px;
     }
 
   }

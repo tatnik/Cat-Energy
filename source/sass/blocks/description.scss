@@ -63,16 +63,16 @@
 
   @media(min-width: $vp-tablet) {
 
-    padding-top: 27px;
+    padding-top: 44px;
     padding-bottom: 22px;
 
     &__list {
-      padding-top: 38px;
+      padding-top: 73px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      column-gap: 80px;
-      row-gap: 36px;
+      column-gap: 59px;
+      row-gap: 88px;
     }
 
     &__item {

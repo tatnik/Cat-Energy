@@ -28,6 +28,23 @@
 
     &__list {
       column-gap: 28px;
+      padding-left: 16px;
     }
+
+    &__link--vk .link__icon {
+      height: 17px;
+      width: auto;
+    }
+
+    &__link--ig .link__icon {
+      height: 23px;
+      width: auto;
+    }
+
+    &__link--fb .link__icon {
+      height: 29px;
+      width: auto;
+    }
+
   }
 }

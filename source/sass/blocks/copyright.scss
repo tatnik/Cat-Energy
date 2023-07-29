@@ -16,6 +16,11 @@
 
 
   @media(min-width: $vp-tablet) {
-    column-gap: 22px;
+    column-gap: 14px;
+
+    & .link__icon {
+      height: 50px;
+      width: auto;
+    }
   }
 }
