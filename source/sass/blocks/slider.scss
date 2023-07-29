@@ -171,4 +171,14 @@
   }
 
   @media(min-width: $vp-desktop) {}
+
+  &__image {
+    margin-right: -30px;
+  }
+
+  &__buttons {
+    padding-top: 33px;
+    justify-content: right;
+    column-gap: 18px;
+  }
 }

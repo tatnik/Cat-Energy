@@ -92,6 +92,7 @@
 
   @media (min-width: $vp-desktop) {
     grid-template-columns: 162px 162px;
+    row-gap: 35px;
 
     &__item {
       &:last-of-type {

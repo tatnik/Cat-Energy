@@ -99,14 +99,14 @@
     padding-bottom: 59px;
 
     &__title {
-      margin-left: 214px;
+      margin-left: 160px;
 
       &--slim:before,
       &--pro:before {
         width: 134px;
-        height: 97px;
-        left: 52px;
-        top: 45px;
+        height: 108px;
+        left: 34px;
+        top: 40px;
         transform: none;
       }
     }
@@ -114,6 +114,7 @@
     &__text {
       padding-top: 73px;
       padding-right: 0;
+      padding-bottom: 0;
     }
 
     &__link {
