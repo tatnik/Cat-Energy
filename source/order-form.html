@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Order form </title>
+  <link rel="preload" as="font" href="/fonts/oswaldregular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/oswaldregular.woff" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/oswaldmedium.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/fonts/oswaldmedium.woff" type="font/woff" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -262,37 +266,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    const navMain = document.querySelector(".site-nav");
-    const navToggle = document.querySelector(".burger-button");
-
-    navToggle.classList.remove("burger-button--nojs");
-    navMain.classList.add('site-nav--closed');
-    navToggle.classList.remove('burger-button--nav-opened');
-
-    navToggle.addEventListener("click", function () {
-      if (navMain.classList.contains("site-nav--closed")) {
-        navMain.classList.remove("site-nav--closed");
-        navToggle.classList.add("burger-button--nav-opened");
-      } else {
-        navMain.classList.add("site-nav--closed");
-        navToggle.classList.remove("burger-button--nav-opened");
-      }
-    });
-
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    function handleTabletChange(e) {
-      if (e.matches) {
-        // for menu mobile
-        navMain.classList.add('site-nav--closed');
-        navToggle.classList.remove('burger-button--nav-opened');
-      }
-    }
-
-    handleTabletChange(mediaQuery);
-    mediaQuery.addEventListener("change", handleTabletChange);
-  </script>
+  <script src="/js/menu.js"></script>
 </body>
 
 </html>
