@@ -11,7 +11,6 @@
   }
 
   @media (max-width: variables.$vp-tablet-1) {
-
     &__title {
       border-top: 1px solid variables.$color-border-add;
     }
@@ -32,7 +31,6 @@
         left: -20px;
         width: 120%;
       }
-
     }
   }
 
@@ -50,8 +48,7 @@
     &__list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      column-gap: 60px;
-      row-gap: 140px;
+      gap: 140px 60px;
     }
 
     &__item {
@@ -62,8 +59,6 @@
   }
 
   @media (min-width: variables.$vp-desktop) {
-
-
     &__list {
       grid-template-columns: repeat(4, 1fr);
     }

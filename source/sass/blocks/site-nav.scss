@@ -2,7 +2,7 @@
 @use "../global/variables";
 
 .site-nav {
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 20px;
   line-height: 20px;
 
@@ -50,8 +50,7 @@
     }
 
     &__list {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       column-gap: 35px;
       justify-content: flex-end;
       padding-top: 7px;
@@ -80,11 +79,13 @@
     }
 
     &__theme--add .link {
-      @include global.color-link(variables.$color-accent,
+      @include global.color-link(
         variables.$color-accent,
         variables.$color-accent,
         variables.$color-accent,
-        variables.$color-accent );
+        variables.$color-accent,
+        variables.$color-accent
+      );
     }
 
     &__theme--add &__item--active {

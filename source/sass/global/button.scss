@@ -7,9 +7,9 @@
   text-align: center;
   display: inline-block;
   border: none;
-  padding-top:10px;
-  padding-bottom:10px;
-  width:100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
 
   &:hover {
     background-color: variables.$color-bg-accent-dark;
@@ -24,8 +24,8 @@
   }
 
   &__text {
-    font-family: "Oswald", sans-serif;
-    font-weight:400;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
     opacity: 1;
   }

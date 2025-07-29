@@ -10,33 +10,32 @@
 
   &__line1,
   &__line2,
-  &__line3,
-  {
-  width: 25px;
-  height: 1px;
-  margin: 6px 0;
-  transition: 0.3s;
-  display: block;
-  background-color: variables.$color-add;
-}
+  &__line3 {
+    width: 25px;
+    height: 1px;
+    margin: 6px 0;
+    transition: 0.3s;
+    display: block;
+    background-color: variables.$color-add;
+  }
 
-&:active {
-  opacity: 0.3;
-}
+  &:active {
+    opacity: 0.3;
+  }
 
-&--nav-opened &__line1 {
-  transform: translate(0, 0) rotate(-45deg);
-}
+  &--nav-opened &__line1 {
+    transform: translate(0, 0) rotate(-45deg);
+  }
 
-&--nav-opened &__line3 {
-  transform: translate(0, -14px) rotate(45deg);
-}
+  &--nav-opened &__line3 {
+    transform: translate(0, -14px) rotate(45deg);
+  }
 
-&--nav-opened &__line2 {
-  opacity: 0;
-}
+  &--nav-opened &__line2 {
+    opacity: 0;
+  }
 
-&--nojs {
-  display: none;
-}
+  &--nojs {
+    display: none;
+  }
 }

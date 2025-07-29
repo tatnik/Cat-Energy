@@ -1,7 +1,7 @@
 @use "variables";
 
 .title {
-  font-family: "Oswald", sans-serif;
+  font-family: Oswald, sans-serif;
   font-weight: 400;
   padding: 0;
   margin: 0;
@@ -26,7 +26,6 @@
       top: 17px;
       left: 0;
       z-index: -1;
-
     }
   }
 
@@ -43,16 +42,13 @@
     }
   }
 
-
   @media (min-width: variables.$vp-desktop) {
     &__line {
       padding-left: 40px;
       padding-right: 40px;
 
       &::before {
-
         left: calc(610px - 50vw + 40px);
-
       }
     }
   }

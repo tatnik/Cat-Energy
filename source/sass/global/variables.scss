@@ -3,19 +3,18 @@
 $color-bg-base: #fff;
 $color-bg-add: #f2f2f2;
 $color-bg-accent: #68b738;
-$color-bg-accent-opacity: rgba(104, 183, 56, 0.85);
+$color-bg-accent-opacity: rgb(104 183 56 / 85%);
 $color-bg-accent-dark: #5eaa2f;
 $color-base: #444;
 $color-base-light: #666;
 $color-base-dark: #111;
 $color-add: #000;
-$color-add-opacity: rgba(0, 0, 0, 0.4);
+$color-add-opacity: rgb(0 0 0 / 40%);
 $color-accent: #fff;
 $color-line: #ff8282;
 $color-border: #e6e6e6;
 $color-border-add: #d9d9d9;
 $color-border-special: #cdcdcd;
-
 $color-link: $color-base;
 $color-arrow: $color-add;
 
@@ -26,5 +25,6 @@ $vp-desktop: 1440px;
 $vp-desktop-1: $vp-desktop - 1px;
 $max-width-content: 1220px;
 $vp-tablet-1: $vp-tablet - 1px;
+
 // arrow
 $arrow-right: "\2192";

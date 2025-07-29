@@ -1,22 +1,19 @@
 @use "../global/variables";
 
 .offers {
-
   &__list {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
   }
 
-  @media(min-width: variables.$vp-tablet) {
-
+  @media (min-width: variables.$vp-tablet) {
     &__list {
-      row-gap: 30px
+      row-gap: 30px;
     }
   }
 
-  @media(min-width: variables.$vp-desktop) {
-
+  @media (min-width: variables.$vp-desktop) {
     margin-top: 82px;
 
     &__list {

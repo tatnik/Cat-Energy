@@ -1,7 +1,6 @@
 @use "../global/variables";
 
 .page-footer {
-
   background-color: variables.$color-bg-add;
 
   &__footer {
@@ -17,7 +16,7 @@
   &__logo {
     padding-top: 33px;
     padding-bottom: 28px;
-    text-align: center
+    text-align: center;
   }
 
   &__social {
@@ -36,15 +35,13 @@
   }
 
   @media (max-width: variables.$vp-tablet-1) {
-
     &__logo,
     &__social {
       border-bottom: 2px solid variables.$color-border;
     }
   }
 
-  @media(min-width: variables.$vp-tablet) {
-
+  @media (min-width: variables.$vp-tablet) {
     &__footer {
       padding-top: 47px;
       padding-bottom: 61px;
@@ -53,7 +50,6 @@
       justify-content: space-between;
       align-items: center;
     }
-
 
     &__logo,
     &__social,
@@ -73,11 +69,9 @@
       padding-bottom: 0;
       margin-right: -5px;
     }
-
   }
 
-  @media(min-width: variables.$vp-desktop) {
-
+  @media (min-width: variables.$vp-desktop) {
     &__footer {
       padding-top: 43px;
       padding-bottom: 58px;

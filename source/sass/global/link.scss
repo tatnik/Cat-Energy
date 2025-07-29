@@ -6,13 +6,11 @@
   border-style: none;
   text-decoration: none;
 
-  @include global.color-link();
-
+  @include global.color-link;
 
   &__icon {
     fill: variables.$color-base-light;
     opacity: 1;
-
 
     &:hover {
       fill: variables.$color-bg-accent;
@@ -27,7 +25,6 @@
     &--stroke {
       fill: none;
       stroke: variables.$color-base-light;
-
 
       &:hover {
         fill: none;

@@ -22,13 +22,17 @@
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "sass": "^1.89.2",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.10"
+    "stylelint": "^16.22.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-scss": "^6.12.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" ",
+    "fix:stylelint": "stylelint \"source/sass/**/*.scss\" --fix",
     "test": "npm run editorconfig && npm run stylelint",
+    "lint:prettier": "prettier --check \"source/**/*.{html,json,css,scss,md}\"",
+    "fix:lint:prettier": "prettier --write \"source/**/*.{html,json,css,scss,md}\"",
     "build": "gulp styles",
     "start": "gulp",
     "deploy:docs": "rm -rf docs && cp -r build docs"

@@ -34,13 +34,11 @@
   &__button {
     color: variables.$color-add;
     background-color: transparent;
-    padding: 3px 3px;
+    padding: 3px;
     flex-shrink: 0;
     flex-grow: 0;
     border: none;
-    border-bottom-color: transparent;
-    border-bottom-style: dotted;
-    border-bottom-width: 1px;
+    border-bottom: 1px dotted transparent;
     cursor: pointer;
     font-size: 16px;
 
@@ -72,7 +70,6 @@
     position: relative;
   }
 
-
   &__toggle-button {
     width: 35px;
     height: 6px;
@@ -88,11 +85,9 @@
     &--right {
       left: 46px;
     }
-
   }
 
-  @media(min-width: variables.$vp-tablet) {
-
+  @media (min-width: variables.$vp-tablet) {
     &__list {
       margin: 0;
     }
@@ -116,7 +111,6 @@
       line-height: 20px;
     }
 
-
     &__toggle {
       width: 428px;
       height: 6px;
@@ -130,13 +124,12 @@
       position: absolute;
       left: 0;
       top: -14px;
-      background: variables.$color-bg-base ;
+      background: variables.$color-bg-base;
       width: 32px;
       height: 32px;
       border-radius: 50%;
       border: 1px solid variables.$color-border-special;
       cursor: pointer;
-
 
       &::after {
         width: 8px;
@@ -154,7 +147,7 @@
       }
 
       &:active {
-        border-color: variables.$color-bg-accent ;
+        border-color: variables.$color-bg-accent;
       }
 
       &--left {
@@ -169,18 +162,17 @@
         left: 394px;
       }
     }
-
   }
 
-  @media(min-width: variables.$vp-desktop) {}
+  @media (min-width: variables.$vp-desktop) {
+    &__image {
+      margin-right: -30px;
+    }
 
-  &__image {
-    margin-right: -30px;
-  }
-
-  &__buttons {
-    padding-top: 33px;
-    justify-content: right;
-    column-gap: 18px;
+    &__buttons {
+      padding-top: 33px;
+      justify-content: right;
+      column-gap: 18px;
+    }
   }
 }

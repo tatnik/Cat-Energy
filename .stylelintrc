@@ -1,8 +1,11 @@
 {
-  "extends": "stylelint-config-htmlacademy",
-
+  "extends": "stylelint-config-standard-scss",
+  "plugins": [
+    "stylelint-scss"
+  ],
   "rules": {
-    "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}]
+    "selector-class-pattern": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   }
 }

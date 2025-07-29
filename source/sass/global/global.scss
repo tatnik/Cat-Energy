@@ -23,11 +23,13 @@
   list-style: none;
 }
 
-@mixin color-link($color: variables.$color-link,
+@mixin color-link(
+  $color: variables.$color-link,
   $color-visited: variables.$color-link,
   $color-focus: variables.$color-link,
   $color-hover: variables.$color-link,
-  $color-active: variables.$color-link) {
+  $color-active: variables.$color-link
+) {
   color: $color;
 
   &:visited {

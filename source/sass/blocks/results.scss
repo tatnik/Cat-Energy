@@ -28,10 +28,12 @@
     color: variables.$color-base;
   }
 
-  @media(min-width: variables.$vp-tablet) {
-
+  @media (min-width: variables.$vp-tablet) {
     background-color: variables.$color-bg-base;
-    background-image: linear-gradient(variables.$color-bg-base 59%, variables.$color-bg-add 59%);
+    background-image: linear-gradient(
+      variables.$color-bg-base 59%,
+      variables.$color-bg-add 59%
+    );
     padding-top: 77px;
     padding-bottom: 68px;
 
@@ -54,12 +56,13 @@
     }
   }
 
-  @media(min-width: variables.$vp-desktop) {
-
-    background-image: linear-gradient(variables.$color-bg-base 195px, variables.$color-bg-add 194px);
+  @media (min-width: variables.$vp-desktop) {
+    background-image: linear-gradient(
+      variables.$color-bg-base 195px,
+      variables.$color-bg-add 194px
+    );
     padding-top: 0;
     padding-bottom: 75px;
-
 
     &__tab {
       display: grid;

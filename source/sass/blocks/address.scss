@@ -12,16 +12,12 @@
     color: variables.$color-base;
   }
 
-
-  @media(min-width: variables.$vp-tablet) {
-
+  @media (min-width: variables.$vp-tablet) {
     text-align: right;
     row-gap: 20px;
-
   }
 
-  @media(min-width: variables.$vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     text-align: left;
   }
-
 }

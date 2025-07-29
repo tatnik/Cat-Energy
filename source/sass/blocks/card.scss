@@ -10,10 +10,8 @@
     line-height: 18px;
     text-transform: uppercase;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 10px;
-    row-gap: 8px;
+    flex-flow: row wrap;
+    gap: 8px 10px;
   }
 
   &__text {
@@ -186,8 +184,7 @@
     }
 
     &__type--add {
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       align-items: center;
 
       & .card__title {
@@ -206,12 +203,11 @@
     }
   }
 
-  @media(min-width:variables.$vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     &__type--add {
       flex-wrap: nowrap;
-      padding: 15px 0 17px 0;
+      padding: 15px 0 17px;
       column-gap: 50px;
-
 
       & .card__features {
         text-align: left;

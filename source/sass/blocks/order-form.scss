@@ -27,8 +27,6 @@
     padding-top: 20px;
   }
 
-
-
   &__additions {
     padding-top: 26px;
     padding-bottom: 24px;
@@ -50,7 +48,7 @@
     line-height: 20px;
   }
 
-  @media(min-width: variables.$vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     padding-bottom: 72px;
 
     &__additions,
@@ -58,7 +56,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 60px;
-
     }
 
     &__button {
@@ -67,7 +64,7 @@
     }
   }
 
-  @media(min-width: variables.$vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     padding-bottom: 80px;
 
     &__additions {

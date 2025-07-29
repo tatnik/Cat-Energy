@@ -26,8 +26,7 @@
     display: flex;
   }
 
-  @media(min-width: variables.$vp-tablet) {
-
+  @media (min-width: variables.$vp-tablet) {
     &__list {
       column-gap: 28px;
       padding-left: 16px;
@@ -47,6 +46,5 @@
       height: 29px;
       width: auto;
     }
-
   }
 }

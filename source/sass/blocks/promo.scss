@@ -1,13 +1,12 @@
 @use "../global/variables";
 
 .promo {
-
   &__main {
     display: flex;
     flex-direction: column;
     background-origin: border-box;
     position: relative;
-    padding: 25px 20px 0 20px;
+    padding: 25px 20px 0;
   }
 
   &__title {
@@ -35,23 +34,22 @@
     display: none;
   }
 
-  @media(max-width: variables.$vp-tablet-1) {
-
+  @media (max-width: variables.$vp-tablet-1) {
     padding-bottom: 22px;
 
     &__main {
       align-items: center;
       color: variables.$color-accent;
-      background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, #fff 302px),
+      background: linear-gradient(rgb(104 183 56 / 85%) 302px, #fff 302px),
         url("../img/promo_bg-mobile.png") no-repeat top,
         linear-gradient(#444 320px, #fff 302px);
       background-size: auto, 302px, auto;
 
-      @media(min-resolution: 2dppx) {
-        background-color: variables.$color-base;
-        background: linear-gradient(rgba(104, 183, 56, 0.85) 302px, #fff 302px),
+      @media (resolution >= 2dppx) {
+         background: linear-gradient(rgb(104 183 56 / 85%) 302px, #fff 302px),
           url("../img/promo_bg-mobile@2x.png") no-repeat top,
-          linear-gradient(#444 320px, #fff 302px);
+          linear-gradient(#444 320px, #fff 302px),
+          variables.$color-base;
         background-size: auto, 302px, auto;
       }
     }
@@ -60,7 +58,6 @@
       order: 4;
     }
 
-
     &__img {
       margin-top: 30px;
       order: 3;
@@ -68,11 +65,10 @@
   }
 
   @media (min-width: variables.$vp-tablet) {
-
     &__main {
       align-items: flex-start;
       color: variables.$color-add;
-      padding: 62px 30px 0 30px;
+      padding: 62px 30px 0;
     }
 
     &__title {
@@ -92,7 +88,7 @@
     }
 
     &__button {
-      padding: 18px 26px 14px 26px;
+      padding: 18px 26px 14px;
       width: auto;
       margin-top: 49px;
       margin-left: 82px;
@@ -130,19 +126,23 @@
 
     &__bg {
       display: block;
-      background-image: linear-gradient(variables.$color-bg-accent-opacity, variables.$color-bg-accent-opacity),
+      background-image: linear-gradient(
+          variables.$color-bg-accent-opacity,
+          variables.$color-bg-accent-opacity
+        ),
         url("../img/promo_bg.png");
       background-repeat: no-repeat, no-repeat;
       background-size: auto, cover;
 
-      @media(min-resolution: 2dppx) {
-        background-image: linear-gradient(variables.$color-bg-accent-opacity, variables.$color-bg-accent-opacity),
+      @media (resolution >= 2dppx) {
+        background-image: linear-gradient(
+            variables.$color-bg-accent-opacity,
+            variables.$color-bg-accent-opacity
+          ),
           url("../img/promo_bg@2x.png");
         background-repeat: no-repeat, no-repeat;
         background-size: auto, cover;
-
       }
-
     }
 
     &__button {
