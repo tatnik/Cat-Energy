@@ -46,10 +46,9 @@
       background-size: auto, 302px, auto;
 
       @media (resolution >= 2dppx) {
-         background: linear-gradient(rgb(104 183 56 / 85%) 302px, #fff 302px),
+        background: linear-gradient(rgb(104 183 56 / 85%) 302px, #fff 302px),
           url("../img/promo_bg-mobile@2x.png") no-repeat top,
-          linear-gradient(#444 320px, #fff 302px),
-          variables.$color-base;
+          linear-gradient(#444 320px, #fff 302px), variables.$color-base;
         background-size: auto, 302px, auto;
       }
     }
