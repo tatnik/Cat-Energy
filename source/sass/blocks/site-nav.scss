@@ -1,3 +1,6 @@
+@use "../global/global";
+@use "../global/variables";
+
 .site-nav {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
@@ -28,17 +31,17 @@
     display: none;
   }
 
-  @media (max-width: $vp-tablet-1) {
-    border-bottom: 1px solid $color-border;
+  @media (max-width: variables.$vp-tablet-1) {
+    border-bottom: 1px solid variables.$color-border;
 
     &__item {
       padding-top: 21px;
       padding-bottom: 21px;
-      border-top: 2px solid $color-border;
+      border-top: 2px solid variables.$color-border;
     }
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     flex-grow: 1;
     flex-shrink: 0;
 
@@ -60,14 +63,14 @@
       line-height: 40px;
 
       &--active {
-        border-bottom: 2px solid $color-bg-accent;
+        border-bottom: 2px solid variables.$color-bg-accent;
       }
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     &__theme--add {
-      color: $color-accent;
+      color: variables.$color-accent;
     }
 
     &__item {
@@ -77,15 +80,15 @@
     }
 
     &__theme--add .link {
-      @include color-link($color-accent,
-        $color-accent,
-        $color-accent,
-        $color-accent,
-        $color-accent );
+      @include global.color-link(variables.$color-accent,
+        variables.$color-accent,
+        variables.$color-accent,
+        variables.$color-accent,
+        variables.$color-accent );
     }
 
     &__theme--add &__item--active {
-      border-bottom-color: $color-accent;
+      border-bottom-color: variables.$color-accent;
     }
   }
 }

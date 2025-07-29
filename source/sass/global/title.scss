@@ -1,3 +1,5 @@
+@use "variables";
+
 .title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -17,7 +19,7 @@
 
     &::before {
       content: " ";
-      background-color: $color-bg-accent;
+      background-color: variables.$color-bg-accent;
       width: calc(100vw - 20px);
       height: 2px;
       position: absolute;
@@ -28,7 +30,7 @@
     }
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     &__line {
       padding-left: 40px;
       padding-right: 40px;
@@ -42,7 +44,7 @@
   }
 
 
-  @media (min-width: $vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     &__line {
       padding-left: 40px;
       padding-right: 40px;

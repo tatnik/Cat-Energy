@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .stats-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -28,9 +30,9 @@
     align-self: center;
     width: min-content;
     transform: translateY(-10px);
-    background-color: $color-bg-add;
+    background-color: variables.$color-bg-add;
     text-transform: lowercase;
-    color: $color-base;
+    color: variables.$color-base;
   }
 
   & :not(:last-child) &__value {
@@ -40,7 +42,7 @@
     text-transform: uppercase;
     box-sizing: border-box;
     margin: 0;
-    border: 1px solid $color-border-special;
+    border: 1px solid variables.$color-border-special;
     border-radius: 3px;
     padding-top: 14px;
     padding-bottom: 18px;
@@ -55,7 +57,7 @@
     margin: 0;
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     grid-template-columns: 162px 162px 2fr;
     column-gap: 42px;
 
@@ -65,7 +67,7 @@
       padding-right: 5px;
       font-size: 14px;
       line-height: 14px;
-      background-color: $color-bg-base;
+      background-color: variables.$color-bg-base;
     }
 
     & :not(:last-child) &__value {
@@ -90,7 +92,7 @@
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     grid-template-columns: 162px 162px;
     row-gap: 35px;
 
@@ -104,7 +106,7 @@
     }
 
     & :not(:last-child) &__term {
-      background-color: $color-bg-add;
+      background-color: variables.$color-bg-add;
     }
   }
 }

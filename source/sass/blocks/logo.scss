@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .logo {
   opacity: 1;
   display: block;
@@ -25,14 +27,14 @@
   }
 
   &__font--cat {
-    fill: $color-base-dark;
+    fill: variables.$color-base-dark;
   }
 
   &__font--energy {
-    fill: $color-base;
+    fill: variables.$color-base;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     &__mobile,
     &__rays {
@@ -46,7 +48,7 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
     &__rays {
       display: block;

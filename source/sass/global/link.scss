@@ -1,39 +1,42 @@
+@use "global";
+@use "variables";
+
 .link {
   background-color: transparent;
   border-style: none;
   text-decoration: none;
 
-  @include color-link();
+  @include global.color-link();
 
 
   &__icon {
-    fill: $color-base-light;
+    fill: variables.$color-base-light;
     opacity: 1;
 
 
     &:hover {
-      fill: $color-bg-accent;
+      fill: variables.$color-bg-accent;
       opacity: 1;
     }
 
     &:active {
-      fill: $color-bg-accent;
+      fill: variables.$color-bg-accent;
       opacity: 0.3;
     }
 
     &--stroke {
       fill: none;
-      stroke: $color-base-light;
+      stroke: variables.$color-base-light;
 
 
       &:hover {
         fill: none;
-        stroke: $color-bg-accent;
+        stroke: variables.$color-bg-accent;
       }
 
       &:active {
         fill: none;
-        stroke: $color-bg-accent;
+        stroke: variables.$color-bg-accent;
       }
     }
   }

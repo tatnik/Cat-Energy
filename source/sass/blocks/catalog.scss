@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .catalog {
   display: flex;
   flex-direction: column;
@@ -8,14 +10,14 @@
     flex-direction: column;
   }
 
-  @media (max-width: $vp-tablet-1) {
+  @media (max-width: variables.$vp-tablet-1) {
 
     &__title {
-      border-top: 1px solid $color-border-add;
+      border-top: 1px solid variables.$color-border-add;
     }
 
     &__list {
-      border-bottom: 1px solid $color-border;
+      border-bottom: 1px solid variables.$color-border;
     }
 
     &__item {
@@ -24,7 +26,7 @@
       &::before {
         content: "";
         height: 1px;
-        background-color: $color-border;
+        background-color: variables.$color-border;
         position: absolute;
         top: 0;
         left: -20px;
@@ -34,7 +36,7 @@
     }
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     padding-top: 104px;
 
     &__title {
@@ -59,7 +61,7 @@
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
 
 
     &__list {

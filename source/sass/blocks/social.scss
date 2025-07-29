@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .social {
   @mixin img-block($url, $width, $height) {
     content: "";
@@ -5,7 +7,7 @@
     height: $height;
     background-image: url($url);
     background-position: center;
-    color: $color-base-light;
+    color: variables.$color-base-light;
     background-repeat: no-repeat;
     flex-shrink: 0;
   }
@@ -24,7 +26,7 @@
     display: flex;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     &__list {
       column-gap: 28px;

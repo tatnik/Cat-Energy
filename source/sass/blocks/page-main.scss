@@ -1,7 +1,9 @@
-.page-main {
-  color: $color-add;
+@use "../global/variables";
 
-  @media (min-width: $vp-tablet) {
+.page-main {
+  color: variables.$color-add;
+
+  @media (min-width: variables.$vp-tablet) {
     &__button {
       padding-left: 26px;
       padding-right: 26px;

@@ -1,6 +1,8 @@
+@use "variables";
+
 .button {
-  background-color: $color-bg-accent;
-  color: $color-accent;
+  background-color: variables.$color-bg-accent;
+  color: variables.$color-accent;
   text-decoration: none;
   text-align: center;
   display: inline-block;
@@ -10,11 +12,11 @@
   width:100%;
 
   &:hover {
-    background-color: $color-bg-accent-dark;
+    background-color: variables.$color-bg-accent-dark;
   }
 
   &:active {
-    background-color: $color-bg-accent-dark;
+    background-color: variables.$color-bg-accent-dark;
 
     &__text {
       opacity: 0.3;
@@ -29,7 +31,7 @@
   }
 
   &__theme--two {
-    background-color: $color-bg-add;
-    color: $color-base;
+    background-color: variables.$color-bg-add;
+    color: variables.$color-base;
   }
 }

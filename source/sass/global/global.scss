@@ -1,3 +1,5 @@
+@use "variables";
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -21,11 +23,11 @@
   list-style: none;
 }
 
-@mixin color-link($color: $color-link,
-  $color-visited: $color-link,
-  $color-focus: $color-link,
-  $color-hover: $color-link,
-  $color-active: $color-link) {
+@mixin color-link($color: variables.$color-link,
+  $color-visited: variables.$color-link,
+  $color-focus: variables.$color-link,
+  $color-hover: variables.$color-link,
+  $color-active: variables.$color-link) {
   color: $color;
 
   &:visited {
@@ -49,7 +51,7 @@
   padding-right: 20px;
   padding-left: 20px;
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     padding-right: 30px;
     padding-left: 30px;
 
@@ -59,12 +61,12 @@
     }
   }
 
-  @media (min-width: $vp-desktop) {
+  @media (min-width: variables.$vp-desktop) {
     padding-right: 0;
     padding-left: 0;
     margin-left: auto;
     margin-right: auto;
-    max-width: $max-width-content;
+    max-width: variables.$max-width-content;
   }
 }
 

@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "../global/variables";
+
 .description {
 
   $icons: "leaf",
@@ -12,7 +15,7 @@
       width: $width;
       background-image: url("../img/icon_#{$icon-name}.svg");
       background-position: center;
-      background-color: $color-bg-accent;
+      background-color: variables.$color-bg-accent;
       background-repeat: no-repeat;
       flex-shrink: 0;
     }
@@ -44,7 +47,7 @@
     line-height: 18px;
     position: relative;
     z-index: 2;
-    color: $color-base;
+    color: variables.$color-base;
   }
 
   &__item {
@@ -55,13 +58,13 @@
   }
 
 
-  @media(max-width: $vp-tablet-1) {
+  @media(max-width: variables.$vp-tablet-1) {
     @each $icon in $icons {
       @include img-block($icon, 60px, 60px);
     }
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     padding-top: 44px;
     padding-bottom: 22px;
@@ -88,7 +91,7 @@
         font-family: "Oswald", sans-serif;
         font-size: 280px;
         line-height: 207px;
-        color: $color-bg-add;
+        color: variables.$color-bg-add;
         height: 230px;
         text-align: right;
       }
@@ -110,11 +113,11 @@
     }
 
     @for $i from 1 to 5 {
-      @include number-block(nth($icons, $i), $i);
+      @include number-block(list.nth($icons, $i), $i);
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
     padding-top: 68px;
 

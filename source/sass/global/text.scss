@@ -1,3 +1,5 @@
+@use "variables";
+
 .text {
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -10,7 +12,7 @@
     line-height: 16px;
   }
 
-  @media(min-width:$vp-tablet) {
+  @media(min-width:variables.$vp-tablet) {
     font-size: 16px;
 
     &--small {

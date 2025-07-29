@@ -1,5 +1,7 @@
+@use "../global/variables";
+
 .results {
-  background-color: $color-bg-add;
+  background-color: variables.$color-bg-add;
   padding-top: 27px;
   padding-bottom: 32px;
 
@@ -23,13 +25,13 @@
 
   &__text {
     line-height: 18px;
-    color: $color-base;
+    color: variables.$color-base;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
-    background-color: $color-bg-base;
-    background-image: linear-gradient($color-bg-base 59%, $color-bg-add 59%);
+    background-color: variables.$color-bg-base;
+    background-image: linear-gradient(variables.$color-bg-base 59%, variables.$color-bg-add 59%);
     padding-top: 77px;
     padding-bottom: 68px;
 
@@ -52,9 +54,9 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
-    background-image: linear-gradient($color-bg-base 195px, $color-bg-add 194px);
+    background-image: linear-gradient(variables.$color-bg-base 195px, variables.$color-bg-add 194px);
     padding-top: 0;
     padding-bottom: 75px;
 

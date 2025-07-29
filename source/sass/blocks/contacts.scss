@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .contacts {
 
   position: relative;
@@ -11,7 +13,7 @@
   }
 
   &__theme--add {
-    background-color: $color-bg-base;
+    background-color: variables.$color-bg-base;
   }
 
   &__title {
@@ -37,7 +39,7 @@
     bottom: 49%;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     &__card {
       padding: 62px 40px 58px 40px;
@@ -55,7 +57,7 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
     &__card {
       padding: 57px 76px 72px 76px;
@@ -65,7 +67,7 @@
       top: 0;
       bottom: 0;
       height: min-content;
-      background-color: $color-bg-base;
+      background-color: variables.$color-bg-base;
       column-gap: 95px;
     }
   }

@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .order-form {
   padding-bottom: 12px;
 
@@ -48,7 +50,7 @@
     line-height: 20px;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
     padding-bottom: 72px;
 
     &__additions,
@@ -65,7 +67,7 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
     padding-bottom: 80px;
 
     &__additions {

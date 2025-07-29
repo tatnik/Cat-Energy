@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .offers {
 
   &__list {
@@ -6,14 +8,14 @@
     row-gap: 20px;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     &__list {
       row-gap: 30px
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
     margin-top: 82px;
 

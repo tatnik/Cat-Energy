@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .slider {
   align-self: center;
 
@@ -30,7 +32,7 @@
   }
 
   &__button {
-    color: $color-add;
+    color: variables.$color-add;
     background-color: transparent;
     padding: 3px 3px;
     flex-shrink: 0;
@@ -43,13 +45,13 @@
     font-size: 16px;
 
     &--current {
-      border-bottom-color: $color-add-opacity;
+      border-bottom-color: variables.$color-add-opacity;
       border-bottom-style: dotted;
     }
 
     &:hover {
       border-bottom-style: solid;
-      border-bottom-color: $color-add-opacity;
+      border-bottom-color: variables.$color-add-opacity;
     }
 
     &:active {
@@ -60,8 +62,8 @@
   &__toggle {
     width: 84px;
     height: 12px;
-    background: $color-bg-base;
-    border: 1px solid $color-border-special;
+    background: variables.$color-bg-base;
+    border: 1px solid variables.$color-border-special;
     border-radius: 6px;
     flex-shrink: 1;
     flex-grow: 0;
@@ -74,7 +76,7 @@
   &__toggle-button {
     width: 35px;
     height: 6px;
-    background: $color-bg-accent;
+    background: variables.$color-bg-accent;
     border-radius: 6px;
     top: 3px;
     position: relative;
@@ -89,7 +91,7 @@
 
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     &__list {
       margin: 0;
@@ -118,7 +120,7 @@
     &__toggle {
       width: 428px;
       height: 6px;
-      background: $color-border-special;
+      background: variables.$color-border-special;
       border: none;
       position: relative;
       cursor: default;
@@ -128,18 +130,18 @@
       position: absolute;
       left: 0;
       top: -14px;
-      background: $color-bg-base ;
+      background: variables.$color-bg-base ;
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      border: 1px solid $color-border-special;
+      border: 1px solid variables.$color-border-special;
       cursor: pointer;
 
 
       &::after {
         width: 8px;
         height: 8px;
-        background: $color-bg-accent;
+        background: variables.$color-bg-accent;
         border-radius: 4px;
         content: " ";
         position: absolute;
@@ -148,11 +150,11 @@
       }
 
       &:hover {
-        box-shadow: 0 2px 2px $color-border-special;
+        box-shadow: 0 2px 2px variables.$color-border-special;
       }
 
       &:active {
-        border-color: $color-bg-accent ;
+        border-color: variables.$color-bg-accent ;
       }
 
       &--left {
@@ -170,7 +172,7 @@
 
   }
 
-  @media(min-width: $vp-desktop) {}
+  @media(min-width: variables.$vp-desktop) {}
 
   &__image {
     margin-right: -30px;

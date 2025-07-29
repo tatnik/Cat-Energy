@@ -14,13 +14,14 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "4.1.0",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "3.0.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-terser": "^2.1.0",
     "gulp-webp": "^4.0.1",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
+    "sass": "^1.89.2",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.10"
   },
@@ -29,7 +30,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy:docs": "rm -rf docs && cp -r build docs"
   },
   "browserslist": [
     "last 2 versions",

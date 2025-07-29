@@ -1,6 +1,8 @@
+@use "../global/variables";
+
 .page-footer {
 
-  background-color: $color-bg-add;
+  background-color: variables.$color-bg-add;
 
   &__footer {
     display: flex;
@@ -33,15 +35,15 @@
     height: 24px;
   }
 
-  @media (max-width: $vp-tablet-1) {
+  @media (max-width: variables.$vp-tablet-1) {
 
     &__logo,
     &__social {
-      border-bottom: 2px solid $color-border;
+      border-bottom: 2px solid variables.$color-border;
     }
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     &__footer {
       padding-top: 47px;
@@ -74,7 +76,7 @@
 
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
     &__footer {
       padding-top: 43px;

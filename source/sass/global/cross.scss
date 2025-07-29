@@ -1,3 +1,5 @@
+@use "variables";
+
 .cross {
   display: flex;
   flex-direction: row;
@@ -7,7 +9,7 @@
     width: 2px;
     height: 30px;
     display: block;
-    background-color: $color-bg-add;
+    background-color: variables.$color-bg-add;
     transition: 0.1s;
   }
 
@@ -15,7 +17,7 @@
     transform: translate(-2px, 0) rotate(90deg);
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     &__line-h,
     &__line-v {
       height: 60px;

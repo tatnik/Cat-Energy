@@ -1,6 +1,8 @@
+@use "../global/variables";
+
 .offer {
-  $color-link: $color-add;
-  background-color: $color-bg-add;
+  $color-link: variables.$color-add;
+  background-color: variables.$color-bg-add;
   padding: 30px 20px 22px 20px;
   position: relative;
 
@@ -33,7 +35,7 @@
   &__text {
     line-height: 18px;
     padding: 30px 0 22px 0;
-    border-bottom: 1px solid $color-border;
+    border-bottom: 1px solid variables.$color-border;
   }
 
   &__link {
@@ -51,11 +53,11 @@
   }
 
   &__icon {
-    fill: $color-add;
-    stroke: $color-add;
+    fill: variables.$color-add;
+    stroke: variables.$color-add;
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
 
     padding: 76px 53px 57px 53px;
 
@@ -94,7 +96,7 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
 
     padding-bottom: 59px;
 

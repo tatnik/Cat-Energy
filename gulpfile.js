@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const sass = require("gulp-sass");
+const gulpSass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const htmlmin = require("gulp-htmlmin");
@@ -13,13 +13,15 @@ const del = require("del");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 
+
+
 // Styles
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(sass())
+    .pipe(gulpSass())
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -141,7 +143,6 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  // gulp.watch("source/js/*.js", gulp.series("scripts"));
   gulp.watch("source/js/*.js", gulp.series("copyJs"));
   gulp.watch("source/*.html").on("change", reload);
 }

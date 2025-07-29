@@ -1,5 +1,7 @@
+@use "../global/variables";
+
 .card {
-  background-color: $color-bg-base;
+  background-color: variables.$color-bg-base;
   width: 100%;
   box-sizing: border-box;
 
@@ -17,7 +19,7 @@
   &__text {
     margin: 0;
     line-height: 16px;
-    color: $color-base;
+    color: variables.$color-base;
   }
 
   &__button {
@@ -111,7 +113,7 @@
     }
   }
 
-  @media (min-width: $vp-tablet) {
+  @media (min-width: variables.$vp-tablet) {
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -140,7 +142,7 @@
     }
 
     &__type--base {
-      background: $color-bg-add;
+      background: variables.$color-bg-add;
 
       & .card__image-wrapper {
         height: 206px;
@@ -164,12 +166,12 @@
 
       & .card__text {
         padding-top: 5px;
-        border-bottom: 1px solid $color-border-add;
+        border-bottom: 1px solid variables.$color-border-add;
       }
     }
 
     &__type--show-all {
-      border: 1px solid $color-border-add;
+      border: 1px solid variables.$color-border-add;
       row-gap: 50px;
 
       & .card__title {
@@ -204,7 +206,7 @@
     }
   }
 
-  @media(min-width:$vp-desktop) {
+  @media(min-width:variables.$vp-desktop) {
     &__type--add {
       flex-wrap: nowrap;
       padding: 15px 0 17px 0;

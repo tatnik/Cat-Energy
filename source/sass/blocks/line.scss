@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .line {
   display: block;
   position: relative;
@@ -7,7 +9,7 @@
     display: inline-block;
     width: 100%;
     height: 2px;
-    background: $color-bg-accent;
+    background: variables.$color-bg-accent;
     z-index: -2;
     position: absolute;
     top: 50%;
@@ -19,12 +21,12 @@
     padding-left: 20px;
     padding-right: 20px;
     margin-left: -20px;
-    background: $color-accent;
+    background: variables.$color-accent;
     flex-direction: column;
 
   }
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
     &__title {
       padding-left: 36px;
       padding-right: 36px;
@@ -35,7 +37,7 @@
 
   }
 
-  @media(min-width: $vp-desktop) {
+  @media(min-width: variables.$vp-desktop) {
     &__title {
       padding-left: 40px;
       padding-right: 40px;

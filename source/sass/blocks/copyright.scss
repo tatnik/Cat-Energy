@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .copyright {
 
   display: flex;
@@ -15,7 +17,7 @@
   }
 
 
-  @media(min-width: $vp-tablet) {
+  @media(min-width: variables.$vp-tablet) {
     column-gap: 14px;
 
     & .link__icon {

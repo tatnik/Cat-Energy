@@ -1,7 +1,9 @@
+@use "variables";
+
 .burger-button {
   cursor: pointer;
   height: 25px;
-  background-color: $color-bg-base;
+  background-color: variables.$color-bg-base;
   border: none;
   padding-left: 0;
   padding-right: 0;
@@ -15,7 +17,7 @@
   margin: 6px 0;
   transition: 0.3s;
   display: block;
-  background-color: $color-add;
+  background-color: variables.$color-add;
 }
 
 &:active {

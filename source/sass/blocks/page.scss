@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 .page {
   height: 100%;
   font-family: "Arial", sans-serif;
@@ -10,8 +12,8 @@
     grid-template-rows: min-content 1fr min-content;
     min-height: 100%;
     margin: 0;
-    color: $color-add;
-    background-color: $color-bg-base;
+    color: variables.$color-add;
+    background-color: variables.$color-bg-base;
     overflow-x: hidden;
   }
 }
